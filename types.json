@@ -3,12 +3,24 @@
         "name": "tribe",
         "slug": "webapp",
         "description": "An open source, collaborative project management framework.",
-        "url": "https://tribe-framework.org",
+        "api_url": "https://tribe.tribe-framework.org",
+        "interface_urls": [
+            { 
+                "title": "Home", 
+                "slug": "home", 
+                "url": "https://tribe-framework.org",
+                "types": ["section", "page"]
+            },
+            { 
+                "title": "Junction", 
+                "slug": "junction", 
+                "url": "https://junction.tribe-framework.org",
+                "types": ["user", "section", "page"]
+            }
+        ],
         "format": "types.json",
         "version": "1.0",
-        "searchable_types": [
-            "section", "page"
-        ],
+        "searchable_types": ["section", "page"],
         "allow_type_change": false,
         "display_activity_log": false,
         "soft_delete_records": false
