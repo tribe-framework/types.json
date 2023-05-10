@@ -42,7 +42,7 @@
                 "list_sortable": false
             },
             {
-                "input_slug": "title",
+                "input_slug": "name",
                 "input_placeholder": "Enter your full name",
                 "input_type": "text",
                 "var_type": "string",
