@@ -29,6 +29,9 @@
         "slug": "user",
         "plural": "users",
         "description": "List of users.",
+        "readonly": false,
+        "sendable": false,
+        "editable": true,
         "modules": [
             {
                 "input_primary": true,
@@ -102,7 +105,9 @@
         "slug": "section",
         "plural": "sections",
         "description": "List of sections.",
-        "disallow_editing": false,
+        "readonly": false,
+        "sendable": false,
+        "editable": true,
         "modules": [
             {
                 "input_slug": "title",
@@ -122,7 +127,9 @@
         "slug": "page",
         "plural": "pages",
         "description": "List of pages.",
-        "disallow_editing": false,
+        "readonly": false,
+        "sendable": false,
+        "editable": true,
         "modules": [
             {
                 "input_slug": "title",
