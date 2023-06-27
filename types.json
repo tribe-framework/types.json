@@ -32,12 +32,6 @@
         "readonly": false,
         "sendable": false,
         "editable": true,
-        "api_hooks": {
-            "on_create": "",
-            "on_read": "",
-            "on_update": "",
-            "on_delete": ""
-        },
         "modules": [
             {
                 "input_primary": true,
@@ -114,12 +108,6 @@
         "readonly": false,
         "sendable": false,
         "editable": true,
-        "api_hooks": {
-            "on_create": "",
-            "on_read": "",
-            "on_update": "",
-            "on_delete": ""
-        },
         "modules": [
             {
                 "input_slug": "title",
@@ -142,12 +130,6 @@
         "readonly": false,
         "sendable": false,
         "editable": true,
-        "api_hooks": {
-            "on_create": "",
-            "on_read": "",
-            "on_update": "",
-            "on_delete": ""
-        },
         "modules": [
             {
                 "input_slug": "title",
@@ -217,6 +199,12 @@
         "sendable": true,
         "editable": false,
         "description": "List of notifications.",
+        "api_hooks": {
+            "on_create": "https://tribe-framework.org/custom/sample-hook.php",
+            "on_read": "https://tribe-framework.org/custom/sample-hook.php",
+            "on_update": "https://tribe-framework.org/custom/sample-hook.php",
+            "on_delete": "https://tribe-framework.org/custom/sample-hook.php"
+        },
         "modules": [
             {
                 "input_slug": "title",
