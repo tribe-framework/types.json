@@ -8,8 +8,7 @@
             "home": { 
                 "title": "Home", 
                 "slug": "home", 
-                "url": "https://tribe-framework.org",
-                "types": ["section", "page"]
+                "url": "https://tribe-framework.org"
             },
             "junction": { 
                 "title": "Junction", 
