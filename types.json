@@ -176,7 +176,7 @@
                 "list_sort": true
             },
             {
-                "input_slug": "cover_media",
+                "input_slug": "cover_url",
                 "input_placeholder": "Enter content cover URL",
                 "input_type": "url",
                 "var_type": "string",
