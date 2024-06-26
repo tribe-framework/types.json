@@ -34,10 +34,7 @@
                 "input_type": "text",
                 "var_type": "string",
                 "input_placeholder": "URL",
-                "input_unique": false,
-                "list_field": true,
-                "list_searchable": true,
-                "list_sortable": true
+                "input_unique": false
             }
         ]
     },
