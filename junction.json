@@ -20,6 +20,16 @@
                 "list_sortable": true
             },
             {
+                "input_slug": "mime",
+                "input_type": "text",
+                "var_type": "string",
+                "input_placeholder": "MIME Type",
+                "input_unique": false,
+                "list_field": true,
+                "list_searchable": true,
+                "list_sortable": true
+            },
+            {
                 "input_slug": "url",
                 "input_type": "text",
                 "var_type": "string",
