@@ -20,6 +20,13 @@
                 "list_sortable": true
             },
             {
+                "input_slug": "strap",
+                "input_type": "textarea",
+                "var_type": "string",
+                "input_placeholder": "Short description",
+                "input_unique": false
+            },
+            {
                 "input_slug": "mime",
                 "input_type": "text",
                 "var_type": "string",
@@ -34,10 +41,7 @@
                 "input_type": "text",
                 "var_type": "string",
                 "input_placeholder": "URL",
-                "input_unique": false,
-                "list_field": true,
-                "list_searchable": true,
-                "list_sortable": true
+                "input_unique": false
             }
         ]
     },
