@@ -1,0 +1,72 @@
+{
+    "file_record": {
+        "name": "file record",
+        "slug": "file_record",
+        "plural": "file records",
+        "description": "List of uploaded file records.",
+        "readonly": false,
+        "sendable": false,
+        "editable": true,
+        "modules": [
+            {
+                "input_slug": "title",
+                "input_primary": true,
+                "input_type": "text",
+                "var_type": "string",
+                "input_placeholder": "Title",
+                "input_unique": false,
+                "list_field": true,
+                "list_searchable": true,
+                "list_sortable": true
+            },
+            {
+                "input_slug": "url",
+                "input_type": "text",
+                "var_type": "string",
+                "input_placeholder": "URL",
+                "input_unique": false,
+                "list_field": true,
+                "list_searchable": true,
+                "list_sortable": true
+            }
+        ]
+    },
+    "deleted_record": {
+        "name": "deleted record",
+        "slug": "deleted_record",
+        "plural": "deleted records",
+        "description": "List of deleted records.",
+        "readonly": true,
+        "sendable": false,
+        "editable": false,
+        "modules": [
+            {
+                "input_slug": "title",
+                "input_primary": true,
+                "input_type": "text",
+                "var_type": "string",
+                "input_placeholder": "Title",
+                "input_unique": false,
+                "list_field": true,
+                "list_searchable": true,
+                "list_sortable": true
+            },
+            {
+                "input_slug": "deleted_type",
+                "input_placeholder": "Type",
+                "input_type": "text",
+                "list_field": true,
+                "list_searchable": true,
+                "list_sortable": true
+            },
+            {
+                "input_slug": "deleted_slug",
+                "input_placeholder": "Slug",
+                "input_type": "text",
+                "list_field": true,
+                "list_searchable": true,
+                "list_sortable": true
+            }
+        ]
+    }
+}
