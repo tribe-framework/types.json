@@ -52,7 +52,7 @@
         "description": "List of deleted records.",
         "readonly": true,
         "sendable": false,
-        "editable": true,
+        "editable": false,
         "modules": [
             {
                 "input_slug": "title",
