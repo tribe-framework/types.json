@@ -46,6 +46,7 @@
         ]
     },
     "blueprint_record": {
+        "hidden": true,
         "name": "blueprint record",
         "slug": "blueprint_record",
         "plural": "blueprint records",
