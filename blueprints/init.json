@@ -1,6 +1,6 @@
 {
     "webapp": {
-        "name": "junction",
+        "name": "Junction",
         "slug": "webapp",
         "description": "A data management tool by Wildfire.",
         "api_url": "https://junction.express",
@@ -37,6 +37,12 @@
                 "list_field": true,
                 "list_searchable": true,
                 "list_sortable": true
+            },
+            {
+                "input_slug": "description",
+                "input_placeholder": "Enter short description",
+                "input_type": "textarea",
+                "var_type": "string"
             }
         ]
     },
@@ -61,15 +67,23 @@
                 "list_sortable": true
             },
             {
+                "input_slug": "section",
+                "input_placeholder": "Select section",
+                "input_type": "select",
+                "var_type": "string"
+            },
+            {
                 "input_slug": "body",
                 "input_placeholder": "Enter content",
                 "input_type": "editorjs",
                 "var_type": "json"
             },
             {
-                "input_slug": "section",
-                "input_placeholder": "Select section",
+                "input_slug": "blocks",
+                "linked_type": "block",
+                "input_placeholder": "Select blocks for this page",
                 "input_type": "select",
+                "input_multiple": true,
                 "var_type": "string"
             },
             {
@@ -89,6 +103,51 @@
                 "list_field": true,
                 "list_search": false,
                 "list_sort": true
+            },
+            {
+                "input_slug": "cover_url",
+                "input_placeholder": "Enter content cover URL",
+                "input_type": "url",
+                "var_type": "string"
+            },
+            {
+                "input_slug": "files",
+                "input_placeholder": "Upload files",
+                "input_type": "file_uploader"
+            }
+        ]
+    },
+    "block": {
+        "name": "block",
+        "slug": "block",
+        "plural": "blocks",
+        "description": "List of blocks.",
+        "readonly": false,
+        "sendable": false,
+        "editable": true,
+        "modules": [
+            {
+                "input_slug": "title",
+                "input_primary": true,
+                "input_type": "text",
+                "var_type": "string",
+                "input_placeholder": "Enter block title",
+                "input_unique": false,
+                "list_field": true,
+                "list_searchable": true,
+                "list_sortable": true
+            },
+            {
+                "input_slug": "page",
+                "input_placeholder": "Select page",
+                "input_type": "select",
+                "var_type": "string"
+            },
+            {
+                "input_slug": "description",
+                "input_placeholder": "Enter description",
+                "input_type": "textarea",
+                "var_type": "string"
             },
             {
                 "input_slug": "cover_url",
