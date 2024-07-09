@@ -16,7 +16,7 @@
         "searchable_types": ["section", "page"],
         "allow_type_change": false,
         "display_activity_log": false,
-        "soft_delete_records": false
+        "soft_delete_records": true
     },
     "section": {
         "name": "section",
