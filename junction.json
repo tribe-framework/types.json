@@ -45,6 +45,35 @@
             }
         ]
     },
+    "blueprint_record": {
+        "name": "blueprint record",
+        "slug": "blueprint_record",
+        "plural": "blueprint records",
+        "description": "List of uploaded blueprint records.",
+        "readonly": false,
+        "sendable": false,
+        "editable": true,
+        "modules": [
+            {
+                "input_slug": "title",
+                "input_primary": true,
+                "input_type": "text",
+                "var_type": "string",
+                "input_placeholder": "Title",
+                "input_unique": false,
+                "list_field": true,
+                "list_searchable": true,
+                "list_sortable": true
+            },
+            {
+                "input_slug": "url",
+                "input_type": "text",
+                "var_type": "string",
+                "input_placeholder": "URL",
+                "input_unique": false
+            }
+        ]
+    },
     "deleted_record": {
         "name": "deleted record",
         "slug": "deleted_record",
