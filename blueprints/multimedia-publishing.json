@@ -1,15 +1,12 @@
 {
-
     "category": {
       "type": "content",
       "slug": "category",
-      "headmeta_title_prepend": "",
-      "headmeta_title_append": [{"type": "webapp", "slug": "headmeta_title"}],
-      "headmeta_title_glue": "&mdash;",
-      "headmeta_title": "title",
       "name": "category",
-      "plural": "categories",
-      "disallow_editing": false,
+      "description": "List of categories.",
+      "readonly": false,
+      "sendable": false,
+      "editable": true,
       "modules": [
         {
           "input_slug": "title",
@@ -33,16 +30,12 @@
     "format": {
       "type": "content",
       "slug": "format",
-      "headmeta_title_prepend": "",
-      "headmeta_title_append": [{"type": "webapp", "slug": "headmeta_title"}],
-      "headmeta_title_glue": "&mdash;",
-      "headmeta_title": "title",
-      "headmeta_description": "body",
-      "headmeta_image_url": "cover_media",
       "name": "format",
       "plural": "formats",
       "description": "List of formats.",
-      "disallow_editing": false,
+      "readonly": false,
+      "sendable": false,
+      "editable": true,
       "modules": [
         {
           "input_slug": "title",
@@ -59,16 +52,12 @@
     "post": {
       "type": "content",
       "slug": "post",
-      "headmeta_title_prepend": "",
-      "headmeta_title_append": [{"type": "webapp", "slug": "headmeta_title"}],
-      "headmeta_title_glue": "&mdash;",
-      "headmeta_title": "title",
-      "headmeta_description": "body",
-      "headmeta_image_url": "cover_media",
       "name": "post",
       "plural": "posts",
       "description": "List of posts.",
-      "disallow_editing": false,
+      "readonly": false,
+      "sendable": false,
+      "editable": true,
       "modules": [
         {
           "input_slug": "title",
@@ -150,16 +139,12 @@
     "page": {
       "type": "content",
       "slug": "page",
-      "headmeta_title_prepend": "",
-      "headmeta_title_append": "",
-      "headmeta_title_glue": "&mdash;",
-      "headmeta_title": "title",
-      "headmeta_description": "body",
-      "headmeta_image_url": "social_image",
       "name": "page",
       "plural": "pages",
       "description": "List of pages.",
-      "disallow_editing": false,
+      "readonly": false,
+      "sendable": false,
+      "editable": true,
       "modules": [
         {
           "input_slug": "title",
@@ -193,16 +178,12 @@
     "author": {
       "type": "content",
       "slug": "author",
-      "headmeta_title_prepend": "",
-      "headmeta_title_append": [{"type": "webapp", "slug": "headmeta_title"}],
-      "headmeta_title_glue": "&mdash;",
-      "headmeta_title": "title",
-      "headmeta_description": "body",
-      "headmeta_image_url": "cover_media",
       "name": "author",
       "plural": "authors",
       "description": "List of authors.",
-      "disallow_editing": false,
+      "readonly": false,
+      "sendable": false,
+      "editable": true,
       "modules": [
         {
           "input_slug": "title",
