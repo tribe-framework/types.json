@@ -1,23 +1,4 @@
 {
-    "webapp": {
-        "name": "Junction",
-        "slug": "webapp",
-        "description": "A data management tool by Wildfire.",
-        "api_url": "https://junction.express",
-        "interface_urls": {
-            "junction": { 
-                "title": "Junction", 
-                "slug": "junction", 
-                "url": "https://junction.express"
-            }
-        },
-        "format": "types.json",
-        "version": "1.0",
-        "searchable_types": ["section", "page"],
-        "allow_type_change": false,
-        "display_activity_log": false,
-        "soft_delete_records": true
-    },
     "section": {
         "name": "section",
         "slug": "section",
