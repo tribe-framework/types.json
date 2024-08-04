@@ -1,8 +1,9 @@
 {
     "file_record": {
-        "name": "file record",
+        "hidden": true,
+        "name": "uploaded file",
         "slug": "file_record",
-        "plural": "file records",
+        "plural": "uploaded files",
         "description": "List of uploaded file records.",
         "readonly": false,
         "sendable": false,
@@ -47,9 +48,9 @@
     },
     "blueprint_record": {
         "hidden": true,
-        "name": "blueprint record",
+        "name": "blueprint",
         "slug": "blueprint_record",
-        "plural": "blueprint records",
+        "plural": "blueprints",
         "description": "List of uploaded blueprint records.",
         "readonly": false,
         "sendable": false,
@@ -76,9 +77,10 @@
         ]
     },
     "deleted_record": {
-        "name": "deleted record",
+        "hidden": true,
+        "name": "deleted file",
         "slug": "deleted_record",
-        "plural": "deleted records",
+        "plural": "trash",
         "description": "List of deleted records.",
         "readonly": true,
         "sendable": false,
