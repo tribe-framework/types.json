@@ -3,6 +3,7 @@
       "type": "content",
       "slug": "category",
       "name": "category",
+      "plural": "categories",
       "description": "List of categories.",
       "readonly": false,
       "sendable": false,
