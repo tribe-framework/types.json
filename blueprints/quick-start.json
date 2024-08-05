@@ -37,7 +37,7 @@
                 "list_sortable": true
             },
             {
-                "input_slug": "max-size",
+                "input_slug": "max_size",
                 "input_placeholder": "Enter maximum size",
                 "input_type": "number",
                 "list_field": true,
