@@ -1,0 +1,54 @@
+{
+    "whale": {
+        "name": "whale",
+        "slug": "whale",
+        "plural": "whales",
+        "description": "List of whales.",
+        "readonly": false,
+        "sendable": false,
+        "editable": true,
+        "modules": [
+            {
+                "input_slug": "name",
+                "input_primary": true,
+                "input_type": "text",
+                "var_type": "string",
+                "input_placeholder": "Enter name",
+                "input_unique": false,
+                "list_field": true,
+                "list_searchable": true,
+                "list_sortable": true
+            },
+            {
+                "input_slug": "scientific_name",
+                "input_placeholder": "Enter scientific name",
+                "input_type": "text",
+                "var_type": "string",
+                "list_field": true,
+                "list_searchable": true,
+                "list_sortable": true
+            },
+            {
+                "input_slug": "population",
+                "input_placeholder": "Enter population size",
+                "input_type": "number",
+                "list_field": true,
+                "list_searchable": true,
+                "list_sortable": true
+            },
+            {
+                "input_slug": "max-size",
+                "input_placeholder": "Enter maximum size",
+                "input_type": "number",
+                "list_field": true,
+                "list_searchable": true,
+                "list_sortable": true
+            },
+            {
+                "input_slug": "files",
+                "input_placeholder": "Upload files",
+                "input_type": "file_uploader"
+            }
+        ]
+    }
+}
