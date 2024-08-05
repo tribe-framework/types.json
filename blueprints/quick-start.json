@@ -3,7 +3,7 @@
         "name": "whale",
         "slug": "whale",
         "plural": "whales",
-        "description": "List of whales.",
+        "description": "Species of whales.",
         "readonly": false,
         "sendable": false,
         "editable": true,
