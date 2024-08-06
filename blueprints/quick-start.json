@@ -38,7 +38,7 @@
             },
             {
                 "input_slug": "max_size",
-                "input_placeholder": "Enter maximum size",
+                "input_placeholder": "Enter maximum size in tons",
                 "input_type": "number",
                 "list_field": true,
                 "list_searchable": true,
