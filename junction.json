@@ -1,118 +1,149 @@
 {
-    "file_record": {
-        "hidden": true,
-        "name": "uploaded file",
-        "slug": "file_record",
-        "plural": "uploaded files",
-        "description": "List of uploaded file records.",
-        "readonly": false,
-        "sendable": false,
-        "editable": true,
-        "modules": [
-            {
-                "input_slug": "title",
-                "input_primary": true,
-                "input_type": "text",
-                "var_type": "string",
-                "input_placeholder": "Title",
-                "input_unique": false,
-                "list_field": true,
-                "list_searchable": true,
-                "list_sortable": true
-            },
-            {
-                "input_slug": "strap",
-                "input_type": "textarea",
-                "var_type": "string",
-                "input_placeholder": "Short description",
-                "input_unique": false
-            },
-            {
-                "input_slug": "mime",
-                "input_type": "text",
-                "var_type": "string",
-                "input_placeholder": "MIME Type",
-                "input_unique": false,
-                "list_field": true,
-                "list_searchable": true,
-                "list_sortable": true
-            },
-            {
-                "input_slug": "url",
-                "input_type": "text",
-                "var_type": "string",
-                "input_placeholder": "URL",
-                "input_unique": false
-            }
-        ]
-    },
-    "blueprint_record": {
-        "hidden": true,
-        "name": "blueprint",
-        "slug": "blueprint_record",
-        "plural": "blueprints",
-        "description": "List of uploaded blueprint records.",
-        "readonly": false,
-        "sendable": false,
-        "editable": true,
-        "modules": [
-            {
-                "input_slug": "title",
-                "input_primary": true,
-                "input_type": "text",
-                "var_type": "string",
-                "input_placeholder": "Title",
-                "input_unique": false,
-                "list_field": true,
-                "list_searchable": true,
-                "list_sortable": true
-            },
-            {
-                "input_slug": "url",
-                "input_type": "text",
-                "var_type": "string",
-                "input_placeholder": "URL",
-                "input_unique": false
-            }
-        ]
-    },
-    "deleted_record": {
-        "hidden": true,
-        "name": "deleted file",
-        "slug": "deleted_record",
-        "plural": "trash",
-        "description": "List of deleted records.",
-        "readonly": true,
-        "sendable": false,
-        "editable": false,
-        "modules": [
-            {
-                "input_slug": "title",
-                "input_primary": true,
-                "input_type": "text",
-                "var_type": "string",
-                "input_placeholder": "Title",
-                "input_unique": false,
-                "list_field": true,
-                "list_searchable": true,
-                "list_sortable": true
-            },
-            {
-                "input_slug": "deleted_type",
-                "input_placeholder": "Type",
-                "input_type": "text",
-                "list_field": true,
-                "list_searchable": true,
-                "list_sortable": true
-            },
-            {
-                "input_slug": "deleted_slug",
-                "input_placeholder": "Slug",
-                "input_type": "text",
-                "list_field": true,
-                "list_searchable": true,
-                "list_sortable": true
-            }
-        ]
-    }
+  "file_record": {
+    "hidden": true,
+    "name": "uploaded file",
+    "slug": "file_record",
+    "plural": "uploaded files",
+    "description": "List of uploaded file records.",
+    "readonly": false,
+    "sendable": false,
+    "editable": true,
+    "modules": [
+      {
+        "input_slug": "title",
+        "input_primary": true,
+        "input_type": "text",
+        "var_type": "string",
+        "input_placeholder": "Title",
+        "input_unique": false,
+        "list_field": true,
+        "list_searchable": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "strap",
+        "input_type": "textarea",
+        "var_type": "string",
+        "input_placeholder": "Short description",
+        "input_unique": false
+      },
+      {
+        "input_slug": "mime",
+        "input_type": "text",
+        "var_type": "string",
+        "input_placeholder": "MIME Type",
+        "input_unique": false,
+        "list_field": true,
+        "list_searchable": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "url",
+        "input_type": "text",
+        "var_type": "string",
+        "input_placeholder": "URL",
+        "input_unique": false
+      }
+    ]
+  },
+  "blueprint_record": {
+    "hidden": true,
+    "name": "blueprint",
+    "slug": "blueprint_record",
+    "plural": "blueprints",
+    "description": "List of uploaded blueprint records.",
+    "readonly": false,
+    "sendable": false,
+    "editable": true,
+    "modules": [
+      {
+        "input_slug": "title",
+        "input_primary": true,
+        "input_type": "text",
+        "var_type": "string",
+        "input_placeholder": "Title",
+        "input_unique": false,
+        "list_field": true,
+        "list_searchable": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "url",
+        "input_type": "text",
+        "var_type": "string",
+        "input_placeholder": "URL",
+        "input_unique": false
+      }
+    ]
+  },
+  "deleted_record": {
+    "hidden": true,
+    "name": "deleted file",
+    "slug": "deleted_record",
+    "plural": "trash",
+    "description": "List of deleted records.",
+    "readonly": true,
+    "sendable": false,
+    "editable": false,
+    "modules": [
+      {
+        "input_slug": "title",
+        "input_primary": true,
+        "input_type": "text",
+        "var_type": "string",
+        "input_placeholder": "Title",
+        "input_unique": false,
+        "list_field": true,
+        "list_searchable": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "deleted_type",
+        "input_placeholder": "Type",
+        "input_type": "text",
+        "list_field": true,
+        "list_searchable": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "deleted_slug",
+        "input_placeholder": "Slug",
+        "input_type": "text",
+        "list_field": true,
+        "list_searchable": true,
+        "list_sortable": true
+      }
+    ]
+  },
+  "apikey_record": {
+    "hidden": true,
+    "name": "API key",
+    "slug": "apikey_record",
+    "plural": "API keys",
+    "description": "List of API keys.",
+    "readonly": true,
+    "sendable": false,
+    "editable": false,
+    "modules": [
+      {
+        "input_slug": "title",
+        "input_primary": true,
+        "input_type": "text",
+        "var_type": "string",
+        "input_placeholder": "Remarks (eg. where is the API key being used)",
+        "input_unique": false,
+        "list_field": true,
+        "list_searchable": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "apikey",
+        "input_placeholder": "API key (UUID v4)",
+        "input_type": "text",
+        "list_field": true,
+        "list_searchable": true,
+        "list_sortable": true
+      }
+    ]
+  }
 }
