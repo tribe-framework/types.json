@@ -121,7 +121,7 @@
     "slug": "apikey_record",
     "plural": "API keys",
     "description": "List of API keys.",
-    "readonly": true,
+    "readonly": false,
     "sendable": false,
     "editable": false,
     "modules": [
