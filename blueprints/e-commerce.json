@@ -1,0 +1,514 @@
+{
+    "product": {
+          "type": "content",
+          "slug": "product",
+          "name": "product",
+          "plural": "products",
+          "description": "List of products.",
+          "readonly": false,
+          "sendable": false,
+          "editable": true,
+          "modules": [
+            {
+              "input_slug": "title",
+              "input_primary": true,
+              "input_type": "text",
+              "var_type": "string",
+              "input_placeholder": "Enter product name",
+              "input_unique": false,
+              "list_field": true,
+              "list_searchable": true,
+              "list_sortable": true
+            },
+            {
+              "input_slug": "sku",
+              "input_type": "text",
+              "var_type": "string",
+              "input_placeholder": "Stock Keeping Unit",
+              "input_unique": true,
+              "list_field": true,
+              "list_searchable": true,
+              "list_sortable": true
+            },
+            {
+              "input_slug": "price",
+              "input_type": "number",
+              "var_type": "float",
+              "input_placeholder": "Price in USD",
+              "list_field": true,
+              "list_sortable": true
+            },
+            {
+              "input_slug": "stock_quantity",
+              "input_type": "number",
+              "var_type": "int",
+              "input_placeholder": "Available stock",
+              "list_field": true,
+              "list_sortable": true
+            },
+            {
+              "input_slug": "description",
+              "input_type": "editorjs",
+              "var_type": "array",
+              "input_placeholder": "Product description"
+            },
+            {
+              "input_slug": "category",
+              "input_type": "select",
+              "var_type": "array",
+              "input_placeholder": "Product categories",
+              "linked_type": "category",
+              "input_multiple": true,
+              "list_field": true,
+              "list_searchable": true
+            },
+            {
+              "input_slug": "meta_title",
+              "input_type": "text",
+              "var_type": "string",
+              "input_placeholder": "SEO title (max 60 characters)"
+            },
+            {
+              "input_slug": "meta_description",
+              "input_type": "textarea",
+              "var_type": "string",
+              "input_placeholder": "Use this field for aria-label, SEO description and other social media description fields"
+            },
+            {
+              "input_slug": "meta_keywords",
+              "input_type": "text",
+              "var_type": "array",
+              "input_multiple": true,
+              "input_placeholder": "SEO keywords"
+            },
+            {
+              "input_slug": "product_images",
+              "input_type": "url",
+              "var_type": "array",
+              "input_multiple": true,
+              "input_placeholder": "Product image URLs"
+            },
+            {
+              "input_slug": "image_alt_texts",
+              "input_type": "text",
+              "var_type": "array",
+              "input_multiple": true,
+              "input_placeholder": "Alt text for product images"
+            },
+            {
+              "input_slug": "files",
+              "input_type": "file_uploader",
+              "var_type": "array",
+              "input_placeholder": "File uploader for product images"
+            },
+            {
+              "input_slug": "content_privacy",
+              "input_placeholder": "Content privacy",
+              "input_type": "select",
+              "input_options": [
+                {
+                  "slug": "public",
+                  "title": "Public link"
+                },
+                {
+                  "slug": "private",
+                  "title": "Private link"
+                },
+                {
+                  "slug": "pending",
+                  "title": "Submit for moderation"
+                },
+                {
+                  "slug": "draft",
+                  "title": "Draft"
+                }
+              ],
+              "list_field": false,
+              "input_unique": false
+            }
+          ],
+          "primary_module": "title",
+          "total_objects": 0
+        },
+        "category": {
+          "type": "content",
+          "slug": "category",
+          "name": "category",
+          "plural": "categories",
+          "description": "Product categories.",
+          "readonly": false,
+          "sendable": false,
+          "editable": true,
+          "modules": [
+            {
+              "input_slug": "title",
+              "input_primary": true,
+              "input_type": "text",
+              "var_type": "string",
+              "input_placeholder": "Category name",
+              "input_unique": true,
+              "list_field": true,
+              "list_searchable": true,
+              "list_sortable": true
+            },
+            {
+              "input_slug": "description",
+              "input_type": "editorjs",
+              "var_type": "array",
+              "input_placeholder": "Category description"
+            },
+            {
+              "input_slug": "parent_category",
+              "input_type": "select",
+              "var_type": "string",
+              "input_placeholder": "Parent category",
+              "linked_type": "category",
+              "list_field": true
+            },
+            {
+              "input_slug": "content_privacy",
+              "input_placeholder": "Content privacy",
+              "input_type": "select",
+              "input_options": [
+                {
+                  "slug": "public",
+                  "title": "Public link"
+                },
+                {
+                  "slug": "private",
+                  "title": "Private link"
+                },
+                {
+                  "slug": "pending",
+                  "title": "Submit for moderation"
+                },
+                {
+                  "slug": "draft",
+                  "title": "Draft"
+                }
+              ],
+              "list_field": false,
+              "input_unique": false
+            }
+          ],
+          "primary_module": "title",
+          "total_objects": 0
+        },
+        "user": {
+          "type": "content",
+          "slug": "user",
+          "name": "user",
+          "plural": "users",
+          "description": "Platform users.",
+          "readonly": false,
+          "sendable": false,
+          "editable": true,
+          "modules": [
+            {
+              "input_slug": "title",
+              "input_primary": true,
+              "input_type": "text",
+              "var_type": "string",
+              "input_placeholder": "Full name",
+              "input_unique": false,
+              "list_field": true,
+              "list_searchable": true,
+              "list_sortable": true
+            },
+            {
+              "input_slug": "email",
+              "input_type": "email",
+              "var_type": "string",
+              "input_placeholder": "Email address",
+              "input_unique": true,
+              "list_field": true,
+              "list_searchable": true
+            },
+            {
+              "input_slug": "phone",
+              "input_type": "tel",
+              "var_type": "string",
+              "input_placeholder": "Phone number",
+              "list_field": true
+            },
+            {
+              "input_slug": "shipping_addresses",
+              "input_type": "textarea",
+              "var_type": "array",
+              "input_multiple": true,
+              "input_placeholder": "Shipping addresses"
+            },
+            {
+              "input_slug": "billing_addresses",
+              "input_type": "textarea",
+              "var_type": "array",
+              "input_multiple": true,
+              "input_placeholder": "Billing addresses"
+            },
+            {
+              "input_slug": "profile_photo_url",
+              "input_type": "url",
+              "var_type": "string",
+              "input_placeholder": "Profile photo URL"
+            },
+            {
+              "input_slug": "files",
+              "input_type": "file_uploader",
+              "var_type": "array",
+              "input_placeholder": "File uploader for profile photo"
+            }
+          ],
+          "primary_module": "title",
+          "total_objects": 0
+        },
+        "order": {
+          "type": "content",
+          "slug": "order",
+          "name": "order",
+          "plural": "orders",
+          "description": "Customer orders.",
+          "readonly": false,
+          "sendable": false,
+          "editable": true,
+          "modules": [
+            {
+              "input_slug": "order_number",
+              "input_primary": true,
+              "input_type": "text",
+              "var_type": "string",
+              "input_placeholder": "Order number",
+              "input_unique": true,
+              "list_field": true,
+              "list_searchable": true,
+              "list_sortable": true
+            },
+            {
+              "input_slug": "user",
+              "input_type": "select",
+              "var_type": "string",
+              "input_placeholder": "Customer",
+              "linked_type": "user",
+              "list_field": true,
+              "list_searchable": true
+            },
+            {
+              "input_slug": "products",
+              "input_type": "select",
+              "var_type": "array",
+              "input_placeholder": "Products ordered",
+              "linked_type": "product",
+              "input_multiple": true,
+              "list_field": true
+            },
+            {
+              "input_slug": "quantities",
+              "input_type": "number",
+              "var_type": "array",
+              "input_multiple": true,
+              "input_placeholder": "Quantity of each product"
+            },
+            {
+              "input_slug": "status",
+              "input_type": "select",
+              "var_type": "string",
+              "input_placeholder": "Order status",
+              "input_options": [
+                {
+                  "slug": "pending",
+                  "title": "Pending"
+                },
+                {
+                  "slug": "processing",
+                  "title": "Processing"
+                },
+                {
+                  "slug": "shipped",
+                  "title": "Shipped"
+                },
+                {
+                  "slug": "delivered",
+                  "title": "Delivered"
+                },
+                {
+                  "slug": "cancelled",
+                  "title": "Cancelled"
+                }
+              ],
+              "list_field": true,
+              "list_searchable": true
+            },
+            {
+              "input_slug": "shipping_address",
+              "input_type": "textarea",
+              "var_type": "string",
+              "input_placeholder": "Shipping address"
+            },
+            {
+              "input_slug": "order_notes",
+              "input_type": "editorjs",
+              "var_type": "array",
+              "input_placeholder": "Order notes and history"
+            },
+            {
+              "input_slug": "content_privacy",
+              "input_placeholder": "Content privacy",
+              "input_type": "select",
+              "input_options": [
+                {
+                  "slug": "public",
+                  "title": "Public link"
+                },
+                {
+                  "slug": "private",
+                  "title": "Private link"
+                },
+                {
+                  "slug": "pending",
+                  "title": "Submit for moderation"
+                },
+                {
+                  "slug": "draft",
+                  "title": "Draft"
+                }
+              ],
+              "list_field": false,
+              "input_unique": false
+            }
+          ],
+          "primary_module": "order_number",
+          "total_objects": 0
+        },
+        "transaction": {
+          "type": "content",
+          "slug": "transaction",
+          "name": "transaction",
+          "plural": "transactions",
+          "description": "Financial transactions.",
+          "readonly": false,
+          "sendable": false,
+          "editable": true,
+          "modules": [
+            {
+              "input_slug": "transaction_id",
+              "input_primary": true,
+              "input_type": "text",
+              "var_type": "string",
+              "input_placeholder": "Transaction ID",
+              "input_unique": true,
+              "list_field": true,
+              "list_searchable": true,
+              "list_sortable": true
+            },
+            {
+              "input_slug": "order",
+              "input_type": "select",
+              "var_type": "string",
+              "input_placeholder": "Related order",
+              "linked_type": "order",
+              "list_field": true,
+              "list_searchable": true
+            },
+            {
+              "input_slug": "amount",
+              "input_type": "number",
+              "var_type": "float",
+              "input_placeholder": "Transaction amount in USD",
+              "list_field": true,
+              "list_sortable": true
+            },
+            {
+              "input_slug": "payment_method",
+              "input_type": "select",
+              "var_type": "string",
+              "input_placeholder": "Payment method",
+              "input_options": [
+                {
+                  "slug": "credit_card",
+                  "title": "Credit Card"
+                },
+                {
+                  "slug": "debit_card",
+                  "title": "Debit Card"
+                },
+                {
+                  "slug": "bank_transfer",
+                  "title": "Bank Transfer"
+                },
+                {
+                  "slug": "digital_wallet",
+                  "title": "Digital Wallet"
+                }
+              ],
+              "list_field": true,
+              "list_searchable": true
+            },
+            {
+              "input_slug": "status",
+              "input_type": "select",
+              "var_type": "string",
+              "input_placeholder": "Transaction status",
+              "input_options": [
+                {
+                  "slug": "pending",
+                  "title": "Pending"
+                },
+                {
+                  "slug": "completed",
+                  "title": "Completed"
+                },
+                {
+                  "slug": "failed",
+                  "title": "Failed"
+                },
+                {
+                  "slug": "refunded",
+                  "title": "Refunded"
+                }
+              ],
+              "list_field": true,
+              "list_searchable": true
+            },
+            {
+              "input_slug": "transaction_date",
+              "input_type": "datetime-local",
+              "var_type": "string",
+              "input_placeholder": "Transaction date and time",
+              "list_field": true,
+              "list_sortable": true
+            },
+            {
+              "input_slug": "notes",
+              "input_type": "editorjs",
+              "var_type": "array",
+              "input_placeholder": "Transaction notes"
+            },
+            {
+              "input_slug": "content_privacy",
+              "input_placeholder": "Content privacy",
+              "input_type": "select",
+              "input_options": [
+                {
+                  "slug": "public",
+                  "title": "Public link"
+                },
+                {
+                  "slug": "private",
+                  "title": "Private link"
+                },
+                {
+                  "slug": "pending",
+                  "title": "Submit for moderation"
+                },
+                {
+                  "slug": "draft",
+                  "title": "Draft"
+                }
+              ],
+              "list_field": false,
+              "input_unique": false
+            }
+          ],
+          "primary_module": "transaction_id",
+          "total_objects": 0
+        }
+}
