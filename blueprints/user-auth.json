@@ -1,0 +1,362 @@
+{
+    "user": {
+          "type": "content",
+          "slug": "user",
+          "name": "user",
+          "plural": "users",
+          "description": "List of registered users.",
+          "readonly": false,
+          "sendable": false,
+          "editable": true,
+          "modules": [
+            {
+              "input_slug": "username",
+              "input_primary": true,
+              "input_type": "text",
+              "var_type": "string",
+              "input_placeholder": "Enter username",
+              "input_unique": true,
+              "list_field": true,
+              "list_searchable": true,
+              "list_sortable": true
+            },
+            {
+              "input_slug": "email",
+              "input_type": "email",
+              "var_type": "string",
+              "input_placeholder": "Enter email address",
+              "input_unique": true,
+              "list_field": true,
+              "list_searchable": true
+            },
+            {
+              "input_slug": "password_hash",
+              "input_type": "password",
+              "var_type": "string",
+              "input_placeholder": "Enter password"
+            },
+            {
+              "input_slug": "first_name",
+              "input_type": "text",
+              "var_type": "string",
+              "input_placeholder": "Enter first name",
+              "list_field": true,
+              "list_searchable": true
+            },
+            {
+              "input_slug": "last_name",
+              "input_type": "text",
+              "var_type": "string",
+              "input_placeholder": "Enter last name",
+              "list_field": true,
+              "list_searchable": true
+            },
+            {
+              "input_slug": "roles",
+              "linked_type": "role",
+              "input_type": "select",
+              "var_type": "array",
+              "input_multiple": true,
+              "input_placeholder": "Select user roles",
+              "list_field": true
+            },
+            {
+              "input_slug": "phone",
+              "input_type": "tel",
+              "var_type": "string",
+              "input_placeholder": "Enter phone number"
+            },
+            {
+              "input_slug": "two_factor_enabled",
+              "input_type": "select",
+              "var_type": "bool",
+              "input_options": [
+                {
+                  "slug": "true",
+                  "title": "Enabled"
+                },
+                {
+                  "slug": "false",
+                  "title": "Disabled"
+                }
+              ],
+              "input_placeholder": "Two-factor authentication status"
+            },
+            {
+              "input_slug": "last_login",
+              "input_type": "datetime-local",
+              "var_type": "string",
+              "input_placeholder": "Last login timestamp",
+              "list_field": true,
+              "list_sortable": true
+            },
+            {
+              "input_slug": "account_status",
+              "input_type": "select",
+              "var_type": "string",
+              "input_options": [
+                {
+                  "slug": "active",
+                  "title": "Active"
+                },
+                {
+                  "slug": "suspended",
+                  "title": "Suspended"
+                },
+                {
+                  "slug": "deactivated",
+                  "title": "Deactivated"
+                }
+              ],
+              "input_placeholder": "Account status",
+              "list_field": true
+            },
+            {
+              "input_slug": "bio",
+              "input_type": "editorjs",
+              "var_type": "array",
+              "input_placeholder": "User biography"
+            },
+            {
+              "input_slug": "profile_photo_url",
+              "input_type": "url",
+              "var_type": "string",
+              "input_placeholder": "Profile photo URL"
+            },
+            {
+              "input_slug": "files",
+              "input_type": "file_uploader",
+              "var_type": "array",
+              "input_placeholder": "Upload profile photo"
+            }
+          ],
+          "primary_module": "username",
+          "total_objects": 0
+        },
+        "role": {
+          "type": "content",
+          "slug": "role",
+          "name": "role",
+          "plural": "roles",
+          "description": "List of user roles.",
+          "readonly": false,
+          "sendable": false,
+          "editable": true,
+          "modules": [
+            {
+              "input_slug": "title",
+              "input_primary": true,
+              "input_type": "text",
+              "var_type": "string",
+              "input_placeholder": "Enter role name",
+              "input_unique": true,
+              "list_field": true,
+              "list_searchable": true
+            },
+            {
+              "input_slug": "description",
+              "input_type": "textarea",
+              "var_type": "string",
+              "input_placeholder": "Enter role description",
+              "list_searchable": true
+            },
+            {
+              "input_slug": "permissions",
+              "linked_type": "permission",
+              "input_type": "select",
+              "var_type": "array",
+              "input_multiple": true,
+              "input_placeholder": "Select permissions"
+            },
+            {
+              "input_slug": "content_privacy",
+              "input_placeholder": "Content privacy",
+              "input_type": "select",
+              "input_options": [
+                {
+                  "slug": "public",
+                  "title": "Public link"
+                },
+                {
+                  "slug": "private",
+                  "title": "Private link"
+                },
+                {
+                  "slug": "pending",
+                  "title": "Submit for moderation"
+                },
+                {
+                  "slug": "draft",
+                  "title": "Draft"
+                }
+              ],
+              "list_field": false,
+              "input_unique": false
+            }
+          ],
+          "primary_module": "title",
+          "total_objects": 0
+        },
+        "permission": {
+          "type": "content",
+          "slug": "permission",
+          "name": "permission",
+          "plural": "permissions",
+          "description": "List of system permissions.",
+          "readonly": false,
+          "sendable": false,
+          "editable": true,
+          "modules": [
+            {
+              "input_slug": "title",
+              "input_primary": true,
+              "input_type": "text",
+              "var_type": "string",
+              "input_placeholder": "Enter permission name",
+              "input_unique": true,
+              "list_field": true,
+              "list_searchable": true
+            },
+            {
+              "input_slug": "description",
+              "input_type": "textarea",
+              "var_type": "string",
+              "input_placeholder": "Enter permission description",
+              "list_searchable": true
+            },
+            {
+              "input_slug": "content_privacy",
+              "input_placeholder": "Content privacy",
+              "input_type": "select",
+              "input_options": [
+                {
+                  "slug": "public",
+                  "title": "Public link"
+                },
+                {
+                  "slug": "private",
+                  "title": "Private link"
+                },
+                {
+                  "slug": "pending",
+                  "title": "Submit for moderation"
+                },
+                {
+                  "slug": "draft",
+                  "title": "Draft"
+                }
+              ],
+              "list_field": false,
+              "input_unique": false
+            }
+          ],
+          "primary_module": "title",
+          "total_objects": 0
+        },
+        "activity_log": {
+          "type": "content",
+          "slug": "activity_log",
+          "name": "activity log",
+          "plural": "activity logs",
+          "description": "User activity logging system.",
+          "readonly": false,
+          "sendable": false,
+          "editable": true,
+          "modules": [
+            {
+              "input_slug": "user",
+              "linked_type": "user",
+              "input_type": "select",
+              "var_type": "string",
+              "input_placeholder": "Select user",
+              "list_field": true,
+              "list_searchable": true
+            },
+            {
+              "input_slug": "action",
+              "input_type": "select",
+              "var_type": "string",
+              "input_options": [
+                {
+                  "slug": "login",
+                  "title": "Login"
+                },
+                {
+                  "slug": "logout",
+                  "title": "Logout"
+                },
+                {
+                  "slug": "password_change",
+                  "title": "Password Change"
+                },
+                {
+                  "slug": "profile_update",
+                  "title": "Profile Update"
+                },
+                {
+                  "slug": "failed_login",
+                  "title": "Failed Login Attempt"
+                }
+              ],
+              "input_placeholder": "Action type",
+              "list_field": true,
+              "list_searchable": true
+            },
+            {
+              "input_slug": "timestamp",
+              "input_type": "datetime-local",
+              "var_type": "string",
+              "input_placeholder": "Action timestamp",
+              "list_field": true,
+              "list_sortable": true
+            },
+            {
+              "input_slug": "ip_address",
+              "input_type": "text",
+              "var_type": "string",
+              "input_placeholder": "IP address",
+              "list_field": true,
+              "list_searchable": true
+            },
+            {
+              "input_slug": "user_agent",
+              "input_type": "text",
+              "var_type": "string",
+              "input_placeholder": "User agent string",
+              "list_searchable": true
+            },
+            {
+              "input_slug": "details",
+              "input_type": "editorjs",
+              "var_type": "array",
+              "input_placeholder": "Additional activity details"
+            },
+            {
+              "input_slug": "content_privacy",
+              "input_placeholder": "Content privacy",
+              "input_type": "select",
+              "input_options": [
+                {
+                  "slug": "public",
+                  "title": "Public link"
+                },
+                {
+                  "slug": "private",
+                  "title": "Private link"
+                },
+                {
+                  "slug": "pending",
+                  "title": "Submit for moderation"
+                },
+                {
+                  "slug": "draft",
+                  "title": "Draft"
+                }
+              ],
+              "list_field": false,
+              "input_unique": false
+            }
+          ],
+          "total_objects": 0
+        }
+}
