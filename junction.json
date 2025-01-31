@@ -141,6 +141,7 @@
         "input_placeholder": "API key (UUID v4)",
         "input_type": "text",
         "input_autogenerate": true,
+        "input_required": true,
         "list_field": true,
         "list_searchable": true,
         "list_sortable": true
