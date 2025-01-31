@@ -138,7 +138,7 @@
       },
       {
         "input_slug": "apikey",
-        "input_placeholder": "API key (UUID v4)",
+        "input_placeholder": "Enter API key (UUID v4)",
         "input_type": "uuid-v4",
         "list_field": true,
         "list_searchable": true,
