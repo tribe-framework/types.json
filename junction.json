@@ -123,7 +123,7 @@
     "description": "List of API keys.",
     "readonly": false,
     "sendable": false,
-    "editable": false,
+    "editable": true,
     "modules": [
       {
         "input_slug": "title",
