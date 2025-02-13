@@ -73,6 +73,12 @@
         "var_type": "string",
         "input_placeholder": "URL",
         "input_unique": false
+      },
+      {
+        "input_slug": "files",
+        "input_placeholder": "Upload files",
+        "input_type": "file_uploader",
+        "input_unique": false
       }
     ]
   },
