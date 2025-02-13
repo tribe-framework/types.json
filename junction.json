@@ -71,7 +71,7 @@
         "input_slug": "url",
         "input_type": "text",
         "var_type": "string",
-        "input_placeholder": "URL",
+        "input_placeholder": "Blueprint JSON file's URL",
         "input_unique": false
       },
       {
