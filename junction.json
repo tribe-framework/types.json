@@ -76,7 +76,7 @@
       },
       {
         "input_slug": "files",
-        "input_placeholder": "Upload files",
+        "input_placeholder": "Upload blueprint's JSON file",
         "input_type": "file_uploader",
         "input_unique": false
       }
