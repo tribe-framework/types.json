@@ -68,13 +68,6 @@
         "list_sortable": true
       },
       {
-        "input_slug": "types_json",
-        "input_type": "textarea",
-        "var_type": "json",
-        "input_placeholder": "Blueprint file's JSON",
-        "input_unique": false
-      },
-      {
         "input_slug": "url",
         "input_type": "text",
         "var_type": "string",
