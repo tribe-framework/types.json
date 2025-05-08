@@ -151,5 +151,42 @@
         "list_sortable": true
       }
     ]
+  },
+  "platform_record": {
+    "hidden": true,
+    "name": "platform",
+    "slug": "platform_record",
+    "plural": "platforms",
+    "description": "List of platforms.",
+    "readonly": false,
+    "sendable": false,
+    "editable": true,
+    "modules": [
+      {
+        "input_slug": "title",
+        "input_primary": true,
+        "input_type": "text",
+        "var_type": "string",
+        "input_placeholder": "Name of your platform",
+        "input_unique": false,
+        "list_field": true,
+        "list_searchable": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "visual_guide",
+        "input_type": "visual-guide",
+        "var_type": "json",
+        "input_placeholder": "Visual Guide",
+        "input_unique": false
+      },
+      {
+        "input_slug": "storylang_stack",
+        "input_type": "storylang-stack",
+        "var_type": "json",
+        "input_placeholder": "Storylang Stack",
+        "input_unique": false
+      }
+    ]
   }
 }
