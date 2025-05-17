@@ -160,9 +160,9 @@
         "list_sort": true
       },
       {
-        "input_slug": "domains",
-        "input_placeholder": "Domains allowed in production (comma separated), wildcard allowed",
-        "input_type": "text",
+        "input_slug": "whitelisted_domains",
+        "input_placeholder": "Whitelisted domains allowed in production (separate by new line), * wildcard allowed, without 'https://'",
+        "input_type": "textarea",
         "list_field": true,
         "list_searchable": true,
         "list_sortable": true
