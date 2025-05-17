@@ -149,6 +149,15 @@
         "list_field": true,
         "list_searchable": true,
         "list_sortable": true
+      },
+      {
+        "input_slug": "readonly",
+        "input_type": "checkbox",
+        "var_type": "bool",
+        "input_placeholder": "Read-only (do not allow create, update or delete)",
+        "list_field": true,
+        "list_search": false,
+        "list_sort": true
       }
     ]
   },
