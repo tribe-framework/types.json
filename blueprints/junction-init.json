@@ -1,12 +1,13 @@
 {
-    "webapp": {
-        "name": "Junction",
-        "slug": "webapp",
-        "description": "Frame your data.",
-        "format": "types.json",
-        "version": "1.0",
-        "allow_type_change": false,
-        "display_activity_log": false,
-        "soft_delete_records": true
-    }
+  "webapp": {
+    "name": "Junction",
+    "slug": "webapp",
+    "description": "Frame your data.",
+    "format": "types.json",
+    "version": "1.0",
+    "block_read_access_without_apikey": false,
+    "allow_type_change": false,
+    "display_activity_log": false,
+    "soft_delete_records": true
+  }
 }

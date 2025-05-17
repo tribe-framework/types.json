@@ -144,8 +144,25 @@
       },
       {
         "input_slug": "apikey",
-        "input_placeholder": "Enter API key (UUID v4)",
+        "input_placeholder": "Generate API key (UUID v4)",
         "input_type": "uuid-v4",
+        "list_field": true,
+        "list_searchable": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "devmode",
+        "input_type": "checkbox",
+        "var_type": "bool",
+        "input_placeholder": "Development mode (allow localhost queries)",
+        "list_field": true,
+        "list_search": false,
+        "list_sort": true
+      },
+      {
+        "input_slug": "domains",
+        "input_placeholder": "Domains allowed in production (comma separated), wildcard allowed",
+        "input_type": "text",
         "list_field": true,
         "list_searchable": true,
         "list_sortable": true
