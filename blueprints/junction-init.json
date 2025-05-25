@@ -2,7 +2,7 @@
   "webapp": {
     "name": "Junction",
     "slug": "webapp",
-    "description": "Frame your data.",
+    "description": "Build your vision.",
     "format": "types.json",
     "version": "1.0",
     "block_read_access_without_apikey": false,
