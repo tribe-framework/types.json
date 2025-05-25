@@ -168,6 +168,14 @@
         "list_sortable": true
       },
       {
+        "input_slug": "blueprint_record",
+        "linked_type": "blueprint_record",
+        "input_type": "select",
+        "var_type": "string",
+        "input_multiple": false,
+        "input_placeholder": "Select blueprint (advanced use only, for default settings leave it empty)"
+      },
+      {
         "input_slug": "readonly",
         "input_type": "checkbox",
         "var_type": "bool",
@@ -198,6 +206,14 @@
         "list_field": true,
         "list_searchable": true,
         "list_sortable": true
+      },
+      {
+        "input_slug": "blueprint_record",
+        "linked_type": "blueprint_record",
+        "input_type": "select",
+        "var_type": "string",
+        "input_multiple": false,
+        "input_placeholder": "Select blueprint"
       },
       {
         "input_slug": "visual_guide",
