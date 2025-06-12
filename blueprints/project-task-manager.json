@@ -1,0 +1,552 @@
+{
+  "project": {
+    "type": "content",
+    "slug": "project",
+    "name": "project",
+    "plural": "projects",
+    "description": "List of projects.",
+    "readonly": false,
+    "sendable": false,
+    "editable": true,
+    "modules": [
+      {
+        "input_slug": "title",
+        "input_primary": true,
+        "input_type": "text",
+        "var_type": "string",
+        "input_placeholder": "Enter project title",
+        "input_unique": true,
+        "list_field": true,
+        "list_searchable": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "description",
+        "input_placeholder": "Project description",
+        "input_type": "textarea",
+        "var_type": "string",
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "start_date",
+        "input_placeholder": "Start date",
+        "input_type": "date",
+        "var_type": "string",
+        "list_field": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "end_date",
+        "input_placeholder": "End date",
+        "input_type": "date",
+        "var_type": "string",
+        "list_field": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "status",
+        "input_placeholder": "Project status",
+        "input_options": [
+          {
+            "slug": "planning",
+            "title": "Planning"
+          },
+          {
+            "slug": "in_progress",
+            "title": "In Progress"
+          },
+          {
+            "slug": "on_hold",
+            "title": "On Hold"
+          },
+          {
+            "slug": "completed",
+            "title": "Completed"
+          },
+          {
+            "slug": "cancelled",
+            "title": "Cancelled"
+          }
+        ],
+        "input_type": "select",
+        "var_type": "string",
+        "input_multiple": false,
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "team_members",
+        "linked_type": "team_member",
+        "input_placeholder": "Team members",
+        "input_type": "select",
+        "var_type": "array",
+        "input_multiple": true,
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "project_manager",
+        "linked_type": "team_member",
+        "input_placeholder": "Project manager",
+        "input_type": "select",
+        "var_type": "string",
+        "input_multiple": false,
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "details",
+        "input_placeholder": "Project details",
+        "input_type": "editorjs",
+        "var_type": "array"
+      },
+      {
+        "input_slug": "logo_url",
+        "input_placeholder": "Project logo URL",
+        "input_type": "url",
+        "var_type": "string"
+      },
+      {
+        "input_slug": "files",
+        "input_type": "file_uploader",
+        "var_type": "array",
+        "input_placeholder": "Project files"
+      },
+      {
+        "input_slug": "content_privacy",
+        "input_placeholder": "Content privacy",
+        "input_type": "select",
+        "input_options": [
+          {
+            "slug": "public",
+            "title": "Public link"
+          },
+          {
+            "slug": "private",
+            "title": "Private link"
+          },
+          {
+            "slug": "pending",
+            "title": "Submit for moderation"
+          },
+          {
+            "slug": "draft",
+            "title": "Draft"
+          }
+        ],
+        "list_field": false,
+        "input_unique": false
+      }
+    ],
+    "primary_module": "title",
+    "total_objects": 0
+  },
+  "task": {
+    "type": "content",
+    "slug": "task",
+    "name": "task",
+    "plural": "tasks",
+    "description": "List of tasks.",
+    "readonly": false,
+    "sendable": false,
+    "editable": true,
+    "modules": [
+      {
+        "input_slug": "title",
+        "input_primary": true,
+        "input_type": "text",
+        "var_type": "string",
+        "input_placeholder": "Enter task title",
+        "input_unique": false,
+        "list_field": true,
+        "list_searchable": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "description",
+        "input_placeholder": "Task description",
+        "input_type": "textarea",
+        "var_type": "string",
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "project",
+        "linked_type": "project",
+        "input_placeholder": "Associated project",
+        "input_type": "select",
+        "var_type": "string",
+        "input_multiple": false,
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "parent_task",
+        "linked_type": "task",
+        "input_placeholder": "Parent task",
+        "input_type": "select",
+        "var_type": "string",
+        "input_multiple": false,
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "assignees",
+        "linked_type": "team_member",
+        "input_placeholder": "Assigned to",
+        "input_type": "select",
+        "var_type": "array",
+        "input_multiple": true,
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "status",
+        "input_placeholder": "Task status",
+        "input_options": [
+          {
+            "slug": "to_do",
+            "title": "To Do"
+          },
+          {
+            "slug": "in_progress",
+            "title": "In Progress"
+          },
+          {
+            "slug": "review",
+            "title": "Under Review"
+          },
+          {
+            "slug": "blocked",
+            "title": "Blocked"
+          },
+          {
+            "slug": "completed",
+            "title": "Completed"
+          }
+        ],
+        "input_type": "select",
+        "var_type": "string",
+        "input_multiple": false,
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "priority",
+        "input_placeholder": "Priority level",
+        "input_options": [
+          {
+            "slug": "low",
+            "title": "Low"
+          },
+          {
+            "slug": "medium",
+            "title": "Medium"
+          },
+          {
+            "slug": "high",
+            "title": "High"
+          },
+          {
+            "slug": "urgent",
+            "title": "Urgent"
+          }
+        ],
+        "input_type": "select",
+        "var_type": "string",
+        "input_multiple": false,
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "due_date",
+        "input_placeholder": "Due date",
+        "input_type": "datetime-local",
+        "var_type": "string",
+        "list_field": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "estimated_hours",
+        "input_placeholder": "Estimated hours",
+        "input_type": "number",
+        "var_type": "float",
+        "list_field": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "actual_hours",
+        "input_placeholder": "Actual hours spent",
+        "input_type": "number",
+        "var_type": "float",
+        "list_field": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "completion_percentage",
+        "input_placeholder": "Completion percentage",
+        "input_type": "number",
+        "var_type": "int",
+        "list_field": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "tags",
+        "input_placeholder": "Task tags",
+        "input_type": "text",
+        "var_type": "array",
+        "input_multiple": true,
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "details",
+        "input_placeholder": "Task details",
+        "input_type": "editorjs",
+        "var_type": "array"
+      },
+      {
+        "input_slug": "attachment_urls",
+        "input_placeholder": "Attachment URLs",
+        "input_type": "url",
+        "var_type": "array",
+        "input_multiple": true
+      },
+      {
+        "input_slug": "files",
+        "input_type": "file_uploader",
+        "var_type": "array",
+        "input_placeholder": "Task files"
+      },
+      {
+        "input_slug": "content_privacy",
+        "input_placeholder": "Content privacy",
+        "input_type": "select",
+        "input_options": [
+          {
+            "slug": "public",
+            "title": "Public link"
+          },
+          {
+            "slug": "private",
+            "title": "Private link"
+          },
+          {
+            "slug": "pending",
+            "title": "Submit for moderation"
+          },
+          {
+            "slug": "draft",
+            "title": "Draft"
+          }
+        ],
+        "list_field": false,
+        "input_unique": false
+      }
+    ],
+    "primary_module": "title",
+    "total_objects": 0
+  },
+  "team_member": {
+    "type": "content",
+    "slug": "team_member",
+    "name": "team member",
+    "plural": "team members",
+    "description": "List of team members.",
+    "readonly": false,
+    "sendable": false,
+    "editable": true,
+    "modules": [
+      {
+        "input_slug": "name",
+        "input_primary": true,
+        "input_type": "text",
+        "var_type": "string",
+        "input_placeholder": "Enter team member name",
+        "input_unique": false,
+        "list_field": true,
+        "list_searchable": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "email",
+        "input_placeholder": "Email address",
+        "input_type": "email",
+        "var_type": "string",
+        "input_unique": true,
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "role",
+        "input_placeholder": "Role",
+        "input_type": "text",
+        "var_type": "string",
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "department",
+        "input_placeholder": "Department",
+        "input_type": "text",
+        "var_type": "string",
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "skills",
+        "input_placeholder": "Skills",
+        "input_type": "text",
+        "var_type": "array",
+        "input_multiple": true,
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "phone",
+        "input_placeholder": "Phone number",
+        "input_type": "tel",
+        "var_type": "string",
+        "list_field": true
+      },
+      {
+        "input_slug": "bio",
+        "input_placeholder": "Biography",
+        "input_type": "textarea",
+        "var_type": "string",
+        "list_searchable": true
+      },
+      {
+        "input_slug": "avatar_url",
+        "input_placeholder": "Profile photo URL",
+        "input_type": "url",
+        "var_type": "string",
+        "list_field": true
+      },
+      {
+        "input_slug": "files",
+        "input_type": "file_uploader",
+        "var_type": "array",
+        "input_placeholder": "Member files"
+      },
+      {
+        "input_slug": "content_privacy",
+        "input_placeholder": "Content privacy",
+        "input_type": "select",
+        "input_options": [
+          {
+            "slug": "public",
+            "title": "Public link"
+          },
+          {
+            "slug": "private",
+            "title": "Private link"
+          },
+          {
+            "slug": "pending",
+            "title": "Submit for moderation"
+          },
+          {
+            "slug": "draft",
+            "title": "Draft"
+          }
+        ],
+        "list_field": false,
+        "input_unique": false
+      }
+    ],
+    "primary_module": "name",
+    "total_objects": 0
+  },
+  "comment": {
+    "type": "content",
+    "slug": "comment",
+    "name": "comment",
+    "plural": "comments",
+    "description": "Task comments.",
+    "readonly": false,
+    "sendable": false,
+    "editable": true,
+    "modules": [
+      {
+        "input_slug": "content",
+        "input_primary": true,
+        "input_type": "textarea",
+        "var_type": "string",
+        "input_placeholder": "Enter comment",
+        "input_unique": false,
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "task",
+        "linked_type": "task",
+        "input_placeholder": "Related task",
+        "input_type": "select",
+        "var_type": "string",
+        "input_multiple": false,
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "author",
+        "linked_type": "team_member",
+        "input_placeholder": "Comment author",
+        "input_type": "select",
+        "var_type": "string",
+        "input_multiple": false,
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "timestamp",
+        "input_placeholder": "Comment time",
+        "input_type": "datetime-local",
+        "var_type": "string",
+        "list_field": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "attachment_urls",
+        "input_placeholder": "Attachment URLs",
+        "input_type": "url",
+        "var_type": "array",
+        "input_multiple": true
+      },
+      {
+        "input_slug": "files",
+        "input_type": "file_uploader",
+        "var_type": "array",
+        "input_placeholder": "Comment attachments"
+      },
+      {
+        "input_slug": "content_privacy",
+        "input_placeholder": "Content privacy",
+        "input_type": "select",
+        "input_options": [
+          {
+            "slug": "public",
+            "title": "Public link"
+          },
+          {
+            "slug": "private",
+            "title": "Private link"
+          },
+          {
+            "slug": "pending",
+            "title": "Submit for moderation"
+          },
+          {
+            "slug": "draft",
+            "title": "Draft"
+          }
+        ],
+        "list_field": false,
+        "input_unique": false
+      }
+    ],
+    "primary_module": "content",
+    "total_objects": 0
+  }
+}

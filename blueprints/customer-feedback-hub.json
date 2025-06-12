@@ -1,0 +1,545 @@
+{
+  "feedback": {
+    "type": "content",
+    "slug": "feedback",
+    "name": "feedback",
+    "plural": "feedback items",
+    "description": "Customer feedback submissions and responses.",
+    "readonly": false,
+    "sendable": false,
+    "editable": true,
+    "modules": [
+      {
+        "input_slug": "title",
+        "input_primary": true,
+        "input_type": "text",
+        "var_type": "string",
+        "input_placeholder": "Feedback summary",
+        "input_unique": false,
+        "list_field": true,
+        "list_searchable": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "customer_name",
+        "input_type": "text",
+        "var_type": "string",
+        "input_placeholder": "Customer name",
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "customer_email",
+        "input_type": "email",
+        "var_type": "string",
+        "input_placeholder": "Customer email address",
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "feedback_content",
+        "input_type": "editorjs",
+        "var_type": "array",
+        "input_placeholder": "Detailed feedback content"
+      },
+      {
+        "input_slug": "categories",
+        "input_type": "select",
+        "var_type": "array",
+        "input_multiple": true,
+        "input_placeholder": "Feedback categories",
+        "linked_type": "category",
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "priority",
+        "input_type": "select",
+        "var_type": "string",
+        "input_placeholder": "Priority level",
+        "input_options": [
+          {
+            "slug": "critical",
+            "title": "Critical"
+          },
+          {
+            "slug": "high",
+            "title": "High"
+          },
+          {
+            "slug": "medium",
+            "title": "Medium"
+          },
+          {
+            "slug": "low",
+            "title": "Low"
+          }
+        ],
+        "list_field": true,
+        "list_searchable": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "status",
+        "input_type": "select",
+        "var_type": "string",
+        "input_placeholder": "Current status",
+        "linked_type": "status",
+        "list_field": true,
+        "list_searchable": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "assigned_to",
+        "input_type": "select",
+        "var_type": "string",
+        "input_placeholder": "Team member assigned",
+        "linked_type": "team_member",
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "source",
+        "input_type": "select",
+        "var_type": "string",
+        "input_placeholder": "Feedback source",
+        "input_options": [
+          {
+            "slug": "email",
+            "title": "Email"
+          },
+          {
+            "slug": "website",
+            "title": "Website Form"
+          },
+          {
+            "slug": "phone",
+            "title": "Phone Call"
+          },
+          {
+            "slug": "social",
+            "title": "Social Media"
+          },
+          {
+            "slug": "in_person",
+            "title": "In Person"
+          }
+        ],
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "submission_date",
+        "input_type": "date",
+        "var_type": "string",
+        "input_placeholder": "Date submitted",
+        "list_field": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "resolution_date",
+        "input_type": "date",
+        "var_type": "string",
+        "input_placeholder": "Date resolved",
+        "list_field": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "satisfaction_score",
+        "input_type": "number",
+        "var_type": "int",
+        "input_placeholder": "Customer satisfaction score (1-10)",
+        "list_field": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "response",
+        "input_type": "editorjs",
+        "var_type": "array",
+        "input_placeholder": "Official response to customer"
+      },
+      {
+        "input_slug": "attachments",
+        "input_type": "url",
+        "var_type": "array",
+        "input_multiple": true,
+        "input_placeholder": "URLs to relevant attachments"
+      },
+      {
+        "input_slug": "files",
+        "input_type": "file_uploader",
+        "var_type": "array",
+        "input_placeholder": "Upload supporting files"
+      },
+      {
+        "input_slug": "content_privacy",
+        "input_placeholder": "Content privacy",
+        "input_type": "select",
+        "input_options": [
+          {
+            "slug": "public",
+            "title": "Public link"
+          },
+          {
+            "slug": "private",
+            "title": "Private link"
+          },
+          {
+            "slug": "pending",
+            "title": "Submit for moderation"
+          },
+          {
+            "slug": "draft",
+            "title": "Draft"
+          }
+        ],
+        "list_field": false,
+        "input_unique": false
+      }
+    ],
+    "primary_module": "title",
+    "total_objects": 0
+  },
+  "category": {
+    "type": "content",
+    "slug": "category",
+    "name": "category",
+    "plural": "categories",
+    "description": "Feedback classification categories.",
+    "readonly": false,
+    "sendable": false,
+    "editable": true,
+    "modules": [
+      {
+        "input_slug": "title",
+        "input_primary": true,
+        "input_type": "text",
+        "var_type": "string",
+        "input_placeholder": "Category name",
+        "input_unique": true,
+        "list_field": true,
+        "list_searchable": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "description",
+        "input_type": "textarea",
+        "var_type": "string",
+        "input_placeholder": "Category description",
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "parent_category",
+        "input_type": "select",
+        "var_type": "string",
+        "input_placeholder": "Parent category (if applicable)",
+        "linked_type": "category",
+        "list_field": true
+      },
+      {
+        "input_slug": "color",
+        "input_type": "color",
+        "var_type": "string",
+        "input_placeholder": "Category color code",
+        "list_field": true
+      },
+      {
+        "input_slug": "content_privacy",
+        "input_placeholder": "Content privacy",
+        "input_type": "select",
+        "input_options": [
+          {
+            "slug": "public",
+            "title": "Public link"
+          },
+          {
+            "slug": "private",
+            "title": "Private link"
+          },
+          {
+            "slug": "pending",
+            "title": "Submit for moderation"
+          },
+          {
+            "slug": "draft",
+            "title": "Draft"
+          }
+        ],
+        "list_field": false,
+        "input_unique": false
+      }
+    ],
+    "primary_module": "title",
+    "total_objects": 0
+  },
+  "status": {
+    "type": "content",
+    "slug": "status",
+    "name": "status",
+    "plural": "statuses",
+    "description": "Feedback processing status options.",
+    "readonly": false,
+    "sendable": false,
+    "editable": true,
+    "modules": [
+      {
+        "input_slug": "title",
+        "input_primary": true,
+        "input_type": "text",
+        "var_type": "string",
+        "input_placeholder": "Status name",
+        "input_unique": true,
+        "list_field": true,
+        "list_searchable": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "description",
+        "input_type": "textarea",
+        "var_type": "string",
+        "input_placeholder": "Status description",
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "sequence",
+        "input_type": "number",
+        "var_type": "int",
+        "input_placeholder": "Sequence order in workflow",
+        "list_field": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "color",
+        "input_type": "color",
+        "var_type": "string",
+        "input_placeholder": "Status color code",
+        "list_field": true
+      },
+      {
+        "input_slug": "is_final",
+        "input_type": "select",
+        "var_type": "bool",
+        "input_placeholder": "Is this a final status?",
+        "input_options": [
+          {
+            "slug": "true",
+            "title": "Yes"
+          },
+          {
+            "slug": "false",
+            "title": "No"
+          }
+        ],
+        "list_field": true
+      },
+      {
+        "input_slug": "content_privacy",
+        "input_placeholder": "Content privacy",
+        "input_type": "select",
+        "input_options": [
+          {
+            "slug": "public",
+            "title": "Public link"
+          },
+          {
+            "slug": "private",
+            "title": "Private link"
+          },
+          {
+            "slug": "pending",
+            "title": "Submit for moderation"
+          },
+          {
+            "slug": "draft",
+            "title": "Draft"
+          }
+        ],
+        "list_field": false,
+        "input_unique": false
+      }
+    ],
+    "primary_module": "title",
+    "total_objects": 0
+  },
+  "team_member": {
+    "type": "content",
+    "slug": "team_member",
+    "name": "team member",
+    "plural": "team members",
+    "description": "Staff who respond to feedback.",
+    "readonly": false,
+    "sendable": false,
+    "editable": true,
+    "modules": [
+      {
+        "input_slug": "title",
+        "input_primary": true,
+        "input_type": "text",
+        "var_type": "string",
+        "input_placeholder": "Team member name",
+        "input_unique": false,
+        "list_field": true,
+        "list_searchable": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "email",
+        "input_type": "email",
+        "var_type": "string",
+        "input_placeholder": "Email address",
+        "input_unique": true,
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "role",
+        "input_type": "text",
+        "var_type": "string",
+        "input_placeholder": "Team role",
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "department",
+        "input_type": "text",
+        "var_type": "string",
+        "input_placeholder": "Department",
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "photo_url",
+        "input_type": "url",
+        "var_type": "string",
+        "input_placeholder": "Profile photo URL"
+      },
+      {
+        "input_slug": "files",
+        "input_type": "file_uploader",
+        "var_type": "array",
+        "input_placeholder": "Upload profile photo"
+      },
+      {
+        "input_slug": "content_privacy",
+        "input_placeholder": "Content privacy",
+        "input_type": "select",
+        "input_options": [
+          {
+            "slug": "public",
+            "title": "Public link"
+          },
+          {
+            "slug": "private",
+            "title": "Private link"
+          },
+          {
+            "slug": "pending",
+            "title": "Submit for moderation"
+          },
+          {
+            "slug": "draft",
+            "title": "Draft"
+          }
+        ],
+        "list_field": false,
+        "input_unique": false
+      }
+    ],
+    "primary_module": "title",
+    "total_objects": 0
+  },
+  "report": {
+    "type": "content",
+    "slug": "report",
+    "name": "report",
+    "plural": "reports",
+    "description": "Feedback analysis reports.",
+    "readonly": false,
+    "sendable": false,
+    "editable": true,
+    "modules": [
+      {
+        "input_slug": "title",
+        "input_primary": true,
+        "input_type": "text",
+        "var_type": "string",
+        "input_placeholder": "Report title",
+        "input_unique": false,
+        "list_field": true,
+        "list_searchable": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "date_range_start",
+        "input_type": "date",
+        "var_type": "string",
+        "input_placeholder": "Start date",
+        "list_field": true
+      },
+      {
+        "input_slug": "date_range_end",
+        "input_type": "date",
+        "var_type": "string",
+        "input_placeholder": "End date",
+        "list_field": true
+      },
+      {
+        "input_slug": "content",
+        "input_type": "editorjs",
+        "var_type": "array",
+        "input_placeholder": "Report content and analysis"
+      },
+      {
+        "input_slug": "categories",
+        "input_type": "select",
+        "var_type": "array",
+        "input_multiple": true,
+        "input_placeholder": "Categories included",
+        "linked_type": "category",
+        "list_field": true
+      },
+      {
+        "input_slug": "chart_urls",
+        "input_type": "url",
+        "var_type": "array",
+        "input_multiple": true,
+        "input_placeholder": "URLs to charts and visualizations"
+      },
+      {
+        "input_slug": "files",
+        "input_type": "file_uploader",
+        "var_type": "array",
+        "input_placeholder": "Upload charts and supporting documents"
+      },
+      {
+        "input_slug": "content_privacy",
+        "input_placeholder": "Content privacy",
+        "input_type": "select",
+        "input_options": [
+          {
+            "slug": "public",
+            "title": "Public link"
+          },
+          {
+            "slug": "private",
+            "title": "Private link"
+          },
+          {
+            "slug": "pending",
+            "title": "Submit for moderation"
+          },
+          {
+            "slug": "draft",
+            "title": "Draft"
+          }
+        ],
+        "list_field": false,
+        "input_unique": false
+      }
+    ],
+    "primary_module": "title",
+    "total_objects": 0
+  }
+}

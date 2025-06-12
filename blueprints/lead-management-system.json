@@ -1,0 +1,453 @@
+{
+  "lead": {
+    "type": "content",
+    "slug": "lead",
+    "name": "lead",
+    "plural": "leads",
+    "description": "Prospective customers or clients in the sales pipeline.",
+    "readonly": false,
+    "sendable": false,
+    "editable": true,
+    "modules": [
+      {
+        "input_slug": "name",
+        "input_primary": true,
+        "input_type": "text",
+        "var_type": "string",
+        "input_placeholder": "Enter lead name",
+        "input_unique": false,
+        "list_field": true,
+        "list_searchable": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "company",
+        "input_type": "text",
+        "var_type": "string",
+        "input_placeholder": "Company name",
+        "list_field": true,
+        "list_searchable": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "email",
+        "input_type": "email",
+        "var_type": "string",
+        "input_placeholder": "Email address",
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "phone",
+        "input_type": "tel",
+        "var_type": "string",
+        "input_placeholder": "Phone number",
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "source",
+        "input_type": "select",
+        "var_type": "string",
+        "linked_type": "source",
+        "input_placeholder": "Lead source",
+        "list_field": true,
+        "list_searchable": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "pipeline_stage",
+        "input_type": "select",
+        "var_type": "string",
+        "linked_type": "pipeline_stage",
+        "input_placeholder": "Current pipeline stage",
+        "list_field": true,
+        "list_searchable": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "activities",
+        "input_type": "select",
+        "var_type": "array",
+        "linked_type": "activity",
+        "input_multiple": true,
+        "input_placeholder": "Related activities"
+      },
+      {
+        "input_slug": "estimated_value",
+        "input_type": "number",
+        "var_type": "float",
+        "input_placeholder": "Estimated deal value",
+        "list_field": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "notes",
+        "input_type": "editorjs",
+        "var_type": "array",
+        "input_placeholder": "Additional notes and details"
+      },
+      {
+        "input_slug": "files",
+        "input_type": "file_uploader",
+        "var_type": "array",
+        "input_placeholder": "Relevant documents"
+      },
+      {
+        "input_slug": "content_privacy",
+        "input_placeholder": "Content privacy",
+        "input_type": "select",
+        "input_options": [
+          {
+            "slug": "public",
+            "title": "Public link"
+          },
+          {
+            "slug": "private",
+            "title": "Private link"
+          },
+          {
+            "slug": "pending",
+            "title": "Submit for moderation"
+          },
+          {
+            "slug": "draft",
+            "title": "Draft"
+          }
+        ],
+        "list_field": false,
+        "input_unique": false
+      }
+    ],
+    "primary_module": "name",
+    "total_objects": 0
+  },
+  "source": {
+    "type": "content",
+    "slug": "source",
+    "name": "source",
+    "plural": "sources",
+    "description": "Channels or methods through which leads are acquired.",
+    "readonly": false,
+    "sendable": false,
+    "editable": true,
+    "modules": [
+      {
+        "input_slug": "title",
+        "input_primary": true,
+        "input_type": "text",
+        "var_type": "string",
+        "input_placeholder": "Source name",
+        "input_unique": true,
+        "list_field": true,
+        "list_searchable": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "description",
+        "input_type": "textarea",
+        "var_type": "string",
+        "input_placeholder": "Source description",
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "category",
+        "input_type": "select",
+        "var_type": "string",
+        "input_options": [
+          {
+            "slug": "online",
+            "title": "Online"
+          },
+          {
+            "slug": "offline",
+            "title": "Offline"
+          },
+          {
+            "slug": "referral",
+            "title": "Referral"
+          },
+          {
+            "slug": "event",
+            "title": "Event"
+          },
+          {
+            "slug": "other",
+            "title": "Other"
+          }
+        ],
+        "input_placeholder": "Source category",
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "tracking_url",
+        "input_type": "url",
+        "var_type": "string",
+        "input_placeholder": "Tracking URL (if applicable)"
+      },
+      {
+        "input_slug": "content_privacy",
+        "input_placeholder": "Content privacy",
+        "input_type": "select",
+        "input_options": [
+          {
+            "slug": "public",
+            "title": "Public link"
+          },
+          {
+            "slug": "private",
+            "title": "Private link"
+          },
+          {
+            "slug": "pending",
+            "title": "Submit for moderation"
+          },
+          {
+            "slug": "draft",
+            "title": "Draft"
+          }
+        ],
+        "list_field": false,
+        "input_unique": false
+      }
+    ],
+    "primary_module": "title",
+    "total_objects": 0
+  },
+  "activity": {
+    "type": "content",
+    "slug": "activity",
+    "name": "activity",
+    "plural": "activities",
+    "description": "Interactions and follow-up actions with leads.",
+    "readonly": false,
+    "sendable": false,
+    "editable": true,
+    "modules": [
+      {
+        "input_slug": "title",
+        "input_primary": true,
+        "input_type": "text",
+        "var_type": "string",
+        "input_placeholder": "Activity title",
+        "input_unique": false,
+        "list_field": true,
+        "list_searchable": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "type",
+        "input_type": "select",
+        "var_type": "string",
+        "input_options": [
+          {
+            "slug": "call",
+            "title": "Phone Call"
+          },
+          {
+            "slug": "email",
+            "title": "Email"
+          },
+          {
+            "slug": "meeting",
+            "title": "Meeting"
+          },
+          {
+            "slug": "demo",
+            "title": "Demo"
+          },
+          {
+            "slug": "proposal",
+            "title": "Proposal"
+          },
+          {
+            "slug": "follow_up",
+            "title": "Follow-up"
+          },
+          {
+            "slug": "other",
+            "title": "Other"
+          }
+        ],
+        "input_placeholder": "Activity type",
+        "list_field": true,
+        "list_searchable": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "related_lead",
+        "input_type": "select",
+        "var_type": "string",
+        "linked_type": "lead",
+        "input_placeholder": "Related lead",
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "date",
+        "input_type": "datetime-local",
+        "var_type": "string",
+        "input_placeholder": "Activity date and time",
+        "list_field": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "reminder_date",
+        "input_type": "datetime-local",
+        "var_type": "string",
+        "input_placeholder": "Reminder date and time",
+        "list_field": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "status",
+        "input_type": "select",
+        "var_type": "string",
+        "input_options": [
+          {
+            "slug": "planned",
+            "title": "Planned"
+          },
+          {
+            "slug": "completed",
+            "title": "Completed"
+          },
+          {
+            "slug": "cancelled",
+            "title": "Cancelled"
+          },
+          {
+            "slug": "postponed",
+            "title": "Postponed"
+          }
+        ],
+        "input_placeholder": "Activity status",
+        "list_field": true,
+        "list_searchable": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "notes",
+        "input_type": "editorjs",
+        "var_type": "array",
+        "input_placeholder": "Activity notes and outcomes"
+      },
+      {
+        "input_slug": "content_privacy",
+        "input_placeholder": "Content privacy",
+        "input_type": "select",
+        "input_options": [
+          {
+            "slug": "public",
+            "title": "Public link"
+          },
+          {
+            "slug": "private",
+            "title": "Private link"
+          },
+          {
+            "slug": "pending",
+            "title": "Submit for moderation"
+          },
+          {
+            "slug": "draft",
+            "title": "Draft"
+          }
+        ],
+        "list_field": false,
+        "input_unique": false
+      }
+    ],
+    "primary_module": "title",
+    "total_objects": 0
+  },
+  "pipeline_stage": {
+    "type": "content",
+    "slug": "pipeline_stage",
+    "name": "pipeline stage",
+    "plural": "pipeline stages",
+    "description": "Stages in the lead conversion process.",
+    "readonly": false,
+    "sendable": false,
+    "editable": true,
+    "modules": [
+      {
+        "input_slug": "title",
+        "input_primary": true,
+        "input_type": "text",
+        "var_type": "string",
+        "input_placeholder": "Stage name",
+        "input_unique": true,
+        "list_field": true,
+        "list_searchable": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "description",
+        "input_type": "textarea",
+        "var_type": "string",
+        "input_placeholder": "Stage description",
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "order",
+        "input_type": "number",
+        "var_type": "int",
+        "input_placeholder": "Stage order (1, 2, 3...)",
+        "list_field": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "probability",
+        "input_type": "number",
+        "var_type": "float",
+        "input_placeholder": "Conversion probability (%)",
+        "list_field": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "color",
+        "input_type": "color",
+        "var_type": "string",
+        "input_placeholder": "Stage color",
+        "list_field": true
+      },
+      {
+        "input_slug": "expected_activities",
+        "input_type": "editorjs",
+        "var_type": "array",
+        "input_placeholder": "Expected activities for this stage"
+      },
+      {
+        "input_slug": "content_privacy",
+        "input_placeholder": "Content privacy",
+        "input_type": "select",
+        "input_options": [
+          {
+            "slug": "public",
+            "title": "Public link"
+          },
+          {
+            "slug": "private",
+            "title": "Private link"
+          },
+          {
+            "slug": "pending",
+            "title": "Submit for moderation"
+          },
+          {
+            "slug": "draft",
+            "title": "Draft"
+          }
+        ],
+        "list_field": false,
+        "input_unique": false
+      }
+    ],
+    "primary_module": "title",
+    "total_objects": 0
+  }
+}

@@ -1,0 +1,777 @@
+{
+  "content_item": {
+    "type": "content",
+    "slug": "content_item",
+    "name": "content item",
+    "plural": "content items",
+    "description": "Core content pieces that can be scheduled and distributed.",
+    "readonly": false,
+    "sendable": false,
+    "editable": true,
+    "modules": [
+      {
+        "input_slug": "title",
+        "input_primary": true,
+        "input_type": "text",
+        "var_type": "string",
+        "input_placeholder": "Enter content title",
+        "input_unique": false,
+        "list_field": true,
+        "list_searchable": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "description",
+        "input_placeholder": "Brief description of the content",
+        "input_type": "textarea",
+        "var_type": "string",
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "content_type",
+        "input_placeholder": "Select content type",
+        "input_options": [
+          {
+            "slug": "blog",
+            "title": "Blog Post"
+          },
+          {
+            "slug": "social",
+            "title": "Social Media Post"
+          },
+          {
+            "slug": "video",
+            "title": "Video"
+          },
+          {
+            "slug": "podcast",
+            "title": "Podcast"
+          },
+          {
+            "slug": "newsletter",
+            "title": "Newsletter"
+          },
+          {
+            "slug": "infographic",
+            "title": "Infographic"
+          },
+          {
+            "slug": "ebook",
+            "title": "E-Book"
+          }
+        ],
+        "input_type": "select",
+        "var_type": "string",
+        "input_multiple": false,
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "body",
+        "input_placeholder": "Full content",
+        "input_type": "editorjs",
+        "var_type": "array"
+      },
+      {
+        "input_slug": "creators",
+        "linked_type": "team_member",
+        "input_placeholder": "Content creators",
+        "input_type": "select",
+        "var_type": "array",
+        "input_multiple": true,
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "themes",
+        "linked_type": "theme",
+        "input_placeholder": "Content themes",
+        "input_type": "select",
+        "var_type": "array",
+        "input_multiple": true,
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "target_audience",
+        "linked_type": "audience",
+        "input_placeholder": "Target audience segments",
+        "input_type": "select",
+        "var_type": "array",
+        "input_multiple": true
+      },
+      {
+        "input_slug": "media_url",
+        "input_placeholder": "Primary media URL",
+        "input_type": "url",
+        "var_type": "string"
+      },
+      {
+        "input_slug": "files",
+        "input_type": "file_uploader",
+        "var_type": "array",
+        "input_placeholder": "Upload media files"
+      },
+      {
+        "input_slug": "content_privacy",
+        "input_placeholder": "Content privacy",
+        "input_type": "select",
+        "input_options": [
+          {
+            "slug": "public",
+            "title": "Public link"
+          },
+          {
+            "slug": "private",
+            "title": "Private link"
+          },
+          {
+            "slug": "pending",
+            "title": "Submit for moderation"
+          },
+          {
+            "slug": "draft",
+            "title": "Draft"
+          }
+        ],
+        "list_field": false,
+        "input_unique": false
+      }
+    ],
+    "primary_module": "title",
+    "total_objects": 0
+  },
+  "calendar_event": {
+    "type": "content",
+    "slug": "calendar_event",
+    "name": "calendar event",
+    "plural": "calendar events",
+    "description": "Scheduled publication events for content items.",
+    "readonly": false,
+    "sendable": false,
+    "editable": true,
+    "modules": [
+      {
+        "input_slug": "title",
+        "input_primary": true,
+        "input_type": "text",
+        "var_type": "string",
+        "input_placeholder": "Event title",
+        "input_unique": false,
+        "list_field": true,
+        "list_searchable": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "content",
+        "linked_type": "content_item",
+        "input_placeholder": "Associated content",
+        "input_type": "select",
+        "var_type": "string",
+        "input_multiple": false,
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "channels",
+        "linked_type": "channel",
+        "input_placeholder": "Publication channels",
+        "input_type": "select",
+        "var_type": "array",
+        "input_multiple": true,
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "publish_date",
+        "input_placeholder": "Publication date and time",
+        "input_type": "datetime-local",
+        "var_type": "string",
+        "list_field": true,
+        "list_searchable": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "status",
+        "input_placeholder": "Publication status",
+        "input_options": [
+          {
+            "slug": "planned",
+            "title": "Planned"
+          },
+          {
+            "slug": "in_progress",
+            "title": "In Progress"
+          },
+          {
+            "slug": "scheduled",
+            "title": "Scheduled"
+          },
+          {
+            "slug": "published",
+            "title": "Published"
+          },
+          {
+            "slug": "rescheduled",
+            "title": "Rescheduled"
+          },
+          {
+            "slug": "cancelled",
+            "title": "Cancelled"
+          }
+        ],
+        "input_type": "select",
+        "var_type": "string",
+        "input_multiple": false,
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "approval_status",
+        "linked_type": "approval_workflow",
+        "input_placeholder": "Approval workflow status",
+        "input_type": "select",
+        "var_type": "string",
+        "input_multiple": false,
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "notes",
+        "input_placeholder": "Publication notes",
+        "input_type": "textarea",
+        "var_type": "string",
+        "list_searchable": true
+      },
+      {
+        "input_slug": "content_privacy",
+        "input_placeholder": "Content privacy",
+        "input_type": "select",
+        "input_options": [
+          {
+            "slug": "public",
+            "title": "Public link"
+          },
+          {
+            "slug": "private",
+            "title": "Private link"
+          },
+          {
+            "slug": "pending",
+            "title": "Submit for moderation"
+          },
+          {
+            "slug": "draft",
+            "title": "Draft"
+          }
+        ],
+        "list_field": false,
+        "input_unique": false
+      }
+    ],
+    "primary_module": "title",
+    "total_objects": 0
+  },
+  "channel": {
+    "type": "content",
+    "slug": "channel",
+    "name": "channel",
+    "plural": "channels",
+    "description": "Publication platforms and channels.",
+    "readonly": false,
+    "sendable": false,
+    "editable": true,
+    "modules": [
+      {
+        "input_slug": "title",
+        "input_primary": true,
+        "input_type": "text",
+        "var_type": "string",
+        "input_placeholder": "Channel name",
+        "input_unique": true,
+        "list_field": true,
+        "list_searchable": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "description",
+        "input_placeholder": "Channel description",
+        "input_type": "textarea",
+        "var_type": "string",
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "channel_type",
+        "input_placeholder": "Channel type",
+        "input_options": [
+          {
+            "slug": "website",
+            "title": "Website"
+          },
+          {
+            "slug": "social_media",
+            "title": "Social Media"
+          },
+          {
+            "slug": "email",
+            "title": "Email"
+          },
+          {
+            "slug": "video_platform",
+            "title": "Video Platform"
+          },
+          {
+            "slug": "podcast_platform",
+            "title": "Podcast Platform"
+          },
+          {
+            "slug": "print",
+            "title": "Print"
+          },
+          {
+            "slug": "other",
+            "title": "Other"
+          }
+        ],
+        "input_type": "select",
+        "var_type": "string",
+        "input_multiple": false,
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "platform_url",
+        "input_placeholder": "Platform URL",
+        "input_type": "url",
+        "var_type": "string",
+        "list_field": true
+      },
+      {
+        "input_slug": "icon_url",
+        "input_placeholder": "Channel icon URL",
+        "input_type": "url",
+        "var_type": "string"
+      },
+      {
+        "input_slug": "files",
+        "input_type": "file_uploader",
+        "var_type": "array",
+        "input_placeholder": "Upload channel assets"
+      },
+      {
+        "input_slug": "content_privacy",
+        "input_placeholder": "Content privacy",
+        "input_type": "select",
+        "input_options": [
+          {
+            "slug": "public",
+            "title": "Public link"
+          },
+          {
+            "slug": "private",
+            "title": "Private link"
+          },
+          {
+            "slug": "pending",
+            "title": "Submit for moderation"
+          },
+          {
+            "slug": "draft",
+            "title": "Draft"
+          }
+        ],
+        "list_field": false,
+        "input_unique": false
+      }
+    ],
+    "primary_module": "title",
+    "total_objects": 0
+  },
+  "approval_workflow": {
+    "type": "content",
+    "slug": "approval_workflow",
+    "name": "approval workflow",
+    "plural": "approval workflows",
+    "description": "Content approval and review processes.",
+    "readonly": false,
+    "sendable": false,
+    "editable": true,
+    "modules": [
+      {
+        "input_slug": "title",
+        "input_primary": true,
+        "input_type": "text",
+        "var_type": "string",
+        "input_placeholder": "Workflow name",
+        "input_unique": false,
+        "list_field": true,
+        "list_searchable": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "content",
+        "linked_type": "content_item",
+        "input_placeholder": "Associated content",
+        "input_type": "select",
+        "var_type": "string",
+        "input_multiple": false,
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "status",
+        "input_placeholder": "Approval status",
+        "input_options": [
+          {
+            "slug": "draft",
+            "title": "Draft"
+          },
+          {
+            "slug": "submitted",
+            "title": "Submitted for Review"
+          },
+          {
+            "slug": "in_review",
+            "title": "In Review"
+          },
+          {
+            "slug": "revisions_requested",
+            "title": "Revisions Requested"
+          },
+          {
+            "slug": "approved",
+            "title": "Approved"
+          },
+          {
+            "slug": "rejected",
+            "title": "Rejected"
+          }
+        ],
+        "input_type": "select",
+        "var_type": "string",
+        "input_multiple": false,
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "reviewers",
+        "linked_type": "team_member",
+        "input_placeholder": "Assigned reviewers",
+        "input_type": "select",
+        "var_type": "array",
+        "input_multiple": true,
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "deadline",
+        "input_placeholder": "Review deadline",
+        "input_type": "datetime-local",
+        "var_type": "string",
+        "list_field": true,
+        "list_searchable": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "feedback",
+        "input_placeholder": "Review feedback",
+        "input_type": "editorjs",
+        "var_type": "array"
+      },
+      {
+        "input_slug": "content_privacy",
+        "input_placeholder": "Content privacy",
+        "input_type": "select",
+        "input_options": [
+          {
+            "slug": "public",
+            "title": "Public link"
+          },
+          {
+            "slug": "private",
+            "title": "Private link"
+          },
+          {
+            "slug": "pending",
+            "title": "Submit for moderation"
+          },
+          {
+            "slug": "draft",
+            "title": "Draft"
+          }
+        ],
+        "list_field": false,
+        "input_unique": false
+      }
+    ],
+    "primary_module": "title",
+    "total_objects": 0
+  },
+  "team_member": {
+    "type": "content",
+    "slug": "team_member",
+    "name": "team member",
+    "plural": "team members",
+    "description": "Content team members and contributors.",
+    "readonly": false,
+    "sendable": false,
+    "editable": true,
+    "modules": [
+      {
+        "input_slug": "title",
+        "input_primary": true,
+        "input_type": "text",
+        "var_type": "string",
+        "input_placeholder": "Team member name",
+        "input_unique": false,
+        "list_field": true,
+        "list_searchable": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "role",
+        "input_placeholder": "Team member role",
+        "input_options": [
+          {
+            "slug": "writer",
+            "title": "Writer"
+          },
+          {
+            "slug": "editor",
+            "title": "Editor"
+          },
+          {
+            "slug": "designer",
+            "title": "Designer"
+          },
+          {
+            "slug": "video_producer",
+            "title": "Video Producer"
+          },
+          {
+            "slug": "social_media_manager",
+            "title": "Social Media Manager"
+          },
+          {
+            "slug": "content_strategist",
+            "title": "Content Strategist"
+          },
+          {
+            "slug": "approver",
+            "title": "Approver"
+          }
+        ],
+        "input_type": "select",
+        "var_type": "string",
+        "input_multiple": true,
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "email",
+        "input_placeholder": "Email address",
+        "input_type": "email",
+        "var_type": "string",
+        "list_field": true
+      },
+      {
+        "input_slug": "bio",
+        "input_placeholder": "Team member bio",
+        "input_type": "textarea",
+        "var_type": "string",
+        "list_searchable": true
+      },
+      {
+        "input_slug": "photo_url",
+        "input_placeholder": "Profile photo URL",
+        "input_type": "url",
+        "var_type": "string"
+      },
+      {
+        "input_slug": "files",
+        "input_type": "file_uploader",
+        "var_type": "array",
+        "input_placeholder": "Upload profile photos"
+      },
+      {
+        "input_slug": "content_privacy",
+        "input_placeholder": "Content privacy",
+        "input_type": "select",
+        "input_options": [
+          {
+            "slug": "public",
+            "title": "Public link"
+          },
+          {
+            "slug": "private",
+            "title": "Private link"
+          },
+          {
+            "slug": "pending",
+            "title": "Submit for moderation"
+          },
+          {
+            "slug": "draft",
+            "title": "Draft"
+          }
+        ],
+        "list_field": false,
+        "input_unique": false
+      }
+    ],
+    "primary_module": "title",
+    "total_objects": 0
+  },
+  "theme": {
+    "type": "content",
+    "slug": "theme",
+    "name": "theme",
+    "plural": "themes",
+    "description": "Content themes and categories.",
+    "readonly": false,
+    "sendable": false,
+    "editable": true,
+    "modules": [
+      {
+        "input_slug": "title",
+        "input_primary": true,
+        "input_type": "text",
+        "var_type": "string",
+        "input_placeholder": "Theme name",
+        "input_unique": true,
+        "list_field": true,
+        "list_searchable": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "description",
+        "input_placeholder": "Theme description",
+        "input_type": "textarea",
+        "var_type": "string",
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "parent_theme",
+        "linked_type": "theme",
+        "input_placeholder": "Parent theme",
+        "input_type": "select",
+        "var_type": "string",
+        "input_multiple": false,
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "color",
+        "input_placeholder": "Theme color",
+        "input_type": "color",
+        "var_type": "string",
+        "list_field": true
+      },
+      {
+        "input_slug": "content_privacy",
+        "input_placeholder": "Content privacy",
+        "input_type": "select",
+        "input_options": [
+          {
+            "slug": "public",
+            "title": "Public link"
+          },
+          {
+            "slug": "private",
+            "title": "Private link"
+          },
+          {
+            "slug": "pending",
+            "title": "Submit for moderation"
+          },
+          {
+            "slug": "draft",
+            "title": "Draft"
+          }
+        ],
+        "list_field": false,
+        "input_unique": false
+      }
+    ],
+    "primary_module": "title",
+    "total_objects": 0
+  },
+  "audience": {
+    "type": "content",
+    "slug": "audience",
+    "name": "audience",
+    "plural": "audiences",
+    "description": "Target audience segments.",
+    "readonly": false,
+    "sendable": false,
+    "editable": true,
+    "modules": [
+      {
+        "input_slug": "title",
+        "input_primary": true,
+        "input_type": "text",
+        "var_type": "string",
+        "input_placeholder": "Audience segment name",
+        "input_unique": true,
+        "list_field": true,
+        "list_searchable": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "description",
+        "input_placeholder": "Audience description",
+        "input_type": "textarea",
+        "var_type": "string",
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "demographics",
+        "input_placeholder": "Demographic information",
+        "input_type": "textarea",
+        "var_type": "string",
+        "list_searchable": true
+      },
+      {
+        "input_slug": "preferred_channels",
+        "linked_type": "channel",
+        "input_placeholder": "Preferred channels",
+        "input_type": "select",
+        "var_type": "array",
+        "input_multiple": true,
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "content_privacy",
+        "input_placeholder": "Content privacy",
+        "input_type": "select",
+        "input_options": [
+          {
+            "slug": "public",
+            "title": "Public link"
+          },
+          {
+            "slug": "private",
+            "title": "Private link"
+          },
+          {
+            "slug": "pending",
+            "title": "Submit for moderation"
+          },
+          {
+            "slug": "draft",
+            "title": "Draft"
+          }
+        ],
+        "list_field": false,
+        "input_unique": false
+      }
+    ],
+    "primary_module": "title",
+    "total_objects": 0
+  }
+}

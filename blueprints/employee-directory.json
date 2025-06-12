@@ -1,0 +1,491 @@
+{
+  "employee": {
+    "type": "content",
+    "slug": "employee",
+    "name": "employee",
+    "plural": "employees",
+    "description": "Staff profiles with personal and professional information.",
+    "readonly": false,
+    "sendable": false,
+    "editable": true,
+    "modules": [
+      {
+        "input_slug": "name",
+        "input_primary": true,
+        "input_type": "text",
+        "var_type": "string",
+        "input_placeholder": "Full name",
+        "input_unique": false,
+        "list_field": true,
+        "list_searchable": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "job_title",
+        "input_type": "text",
+        "var_type": "string",
+        "input_placeholder": "Job title",
+        "list_field": true,
+        "list_searchable": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "department",
+        "input_type": "select",
+        "var_type": "string",
+        "input_placeholder": "Department",
+        "linked_type": "department",
+        "list_field": true,
+        "list_searchable": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "manager",
+        "input_type": "select",
+        "var_type": "string",
+        "input_placeholder": "Direct manager",
+        "linked_type": "employee",
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "email",
+        "input_type": "email",
+        "var_type": "string",
+        "input_placeholder": "Work email address",
+        "input_unique": true,
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "phone",
+        "input_type": "tel",
+        "var_type": "string",
+        "input_placeholder": "Work phone number",
+        "list_field": true
+      },
+      {
+        "input_slug": "start_date",
+        "input_type": "date",
+        "var_type": "string",
+        "input_placeholder": "Employment start date",
+        "list_field": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "skills",
+        "input_type": "select",
+        "var_type": "array",
+        "input_placeholder": "Skills and competencies",
+        "linked_type": "skill",
+        "input_multiple": true,
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "bio",
+        "input_type": "editorjs",
+        "var_type": "array",
+        "input_placeholder": "Professional biography"
+      },
+      {
+        "input_slug": "emergency_contact",
+        "input_type": "text",
+        "var_type": "string",
+        "input_placeholder": "Emergency contact information"
+      },
+      {
+        "input_slug": "photo_url",
+        "input_type": "url",
+        "var_type": "string",
+        "input_placeholder": "Profile photo URL"
+      },
+      {
+        "input_slug": "documents",
+        "input_type": "select",
+        "var_type": "array",
+        "input_placeholder": "HR documents",
+        "linked_type": "document",
+        "input_multiple": true
+      },
+      {
+        "input_slug": "files",
+        "input_type": "file_uploader",
+        "var_type": "array",
+        "input_placeholder": "Upload employee documents"
+      },
+      {
+        "input_slug": "content_privacy",
+        "input_placeholder": "Content privacy",
+        "input_type": "select",
+        "input_options": [
+          {
+            "slug": "public",
+            "title": "Public link"
+          },
+          {
+            "slug": "private",
+            "title": "Private link"
+          },
+          {
+            "slug": "pending",
+            "title": "Submit for moderation"
+          },
+          {
+            "slug": "draft",
+            "title": "Draft"
+          }
+        ],
+        "list_field": false,
+        "input_unique": false
+      }
+    ],
+    "primary_module": "name",
+    "total_objects": 0
+  },
+  "department": {
+    "type": "content",
+    "slug": "department",
+    "name": "department",
+    "plural": "departments",
+    "description": "Company departments and teams.",
+    "readonly": false,
+    "sendable": false,
+    "editable": true,
+    "modules": [
+      {
+        "input_slug": "name",
+        "input_primary": true,
+        "input_type": "text",
+        "var_type": "string",
+        "input_placeholder": "Department name",
+        "input_unique": true,
+        "list_field": true,
+        "list_searchable": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "description",
+        "input_type": "textarea",
+        "var_type": "string",
+        "input_placeholder": "Department description",
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "head",
+        "input_type": "select",
+        "var_type": "string",
+        "input_placeholder": "Department head",
+        "linked_type": "employee",
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "parent_department",
+        "input_type": "select",
+        "var_type": "string",
+        "input_placeholder": "Parent department",
+        "linked_type": "department"
+      },
+      {
+        "input_slug": "location",
+        "input_type": "text",
+        "var_type": "string",
+        "input_placeholder": "Physical location",
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "logo_url",
+        "input_type": "url",
+        "var_type": "string",
+        "input_placeholder": "Department logo URL"
+      },
+      {
+        "input_slug": "files",
+        "input_type": "file_uploader",
+        "var_type": "array",
+        "input_placeholder": "Upload department files"
+      },
+      {
+        "input_slug": "content_privacy",
+        "input_placeholder": "Content privacy",
+        "input_type": "select",
+        "input_options": [
+          {
+            "slug": "public",
+            "title": "Public link"
+          },
+          {
+            "slug": "private",
+            "title": "Private link"
+          },
+          {
+            "slug": "pending",
+            "title": "Submit for moderation"
+          },
+          {
+            "slug": "draft",
+            "title": "Draft"
+          }
+        ],
+        "list_field": false,
+        "input_unique": false
+      }
+    ],
+    "primary_module": "name",
+    "total_objects": 0
+  },
+  "skill": {
+    "type": "content",
+    "slug": "skill",
+    "name": "skill",
+    "plural": "skills",
+    "description": "Professional skills and competencies.",
+    "readonly": false,
+    "sendable": false,
+    "editable": true,
+    "modules": [
+      {
+        "input_slug": "name",
+        "input_primary": true,
+        "input_type": "text",
+        "var_type": "string",
+        "input_placeholder": "Skill name",
+        "input_unique": true,
+        "list_field": true,
+        "list_searchable": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "description",
+        "input_type": "textarea",
+        "var_type": "string",
+        "input_placeholder": "Skill description",
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "category",
+        "input_type": "select",
+        "var_type": "string",
+        "input_placeholder": "Skill category",
+        "input_options": [
+          {
+            "slug": "technical",
+            "title": "Technical"
+          },
+          {
+            "slug": "soft",
+            "title": "Soft Skills"
+          },
+          {
+            "slug": "language",
+            "title": "Language"
+          },
+          {
+            "slug": "certification",
+            "title": "Certification"
+          },
+          {
+            "slug": "management",
+            "title": "Management"
+          }
+        ],
+        "list_field": true,
+        "list_searchable": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "content_privacy",
+        "input_placeholder": "Content privacy",
+        "input_type": "select",
+        "input_options": [
+          {
+            "slug": "public",
+            "title": "Public link"
+          },
+          {
+            "slug": "private",
+            "title": "Private link"
+          },
+          {
+            "slug": "pending",
+            "title": "Submit for moderation"
+          },
+          {
+            "slug": "draft",
+            "title": "Draft"
+          }
+        ],
+        "list_field": false,
+        "input_unique": false
+      }
+    ],
+    "primary_module": "name",
+    "total_objects": 0
+  },
+  "document": {
+    "type": "content",
+    "slug": "document",
+    "name": "document",
+    "plural": "documents",
+    "description": "HR and employee-related documents.",
+    "readonly": false,
+    "sendable": false,
+    "editable": true,
+    "modules": [
+      {
+        "input_slug": "title",
+        "input_primary": true,
+        "input_type": "text",
+        "var_type": "string",
+        "input_placeholder": "Document title",
+        "input_unique": false,
+        "list_field": true,
+        "list_searchable": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "document_type",
+        "input_type": "select",
+        "var_type": "string",
+        "input_placeholder": "Document type",
+        "input_options": [
+          {
+            "slug": "contract",
+            "title": "Employment Contract"
+          },
+          {
+            "slug": "id",
+            "title": "Identification Document"
+          },
+          {
+            "slug": "certificate",
+            "title": "Certificate"
+          },
+          {
+            "slug": "review",
+            "title": "Performance Review"
+          },
+          {
+            "slug": "policy",
+            "title": "Company Policy"
+          },
+          {
+            "slug": "other",
+            "title": "Other"
+          }
+        ],
+        "list_field": true,
+        "list_searchable": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "description",
+        "input_type": "textarea",
+        "var_type": "string",
+        "input_placeholder": "Document description",
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "issue_date",
+        "input_type": "date",
+        "var_type": "string",
+        "input_placeholder": "Date issued",
+        "list_field": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "expiry_date",
+        "input_type": "date",
+        "var_type": "string",
+        "input_placeholder": "Expiration date (if applicable)",
+        "list_field": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "related_employee",
+        "input_type": "select",
+        "var_type": "string",
+        "input_placeholder": "Related employee",
+        "linked_type": "employee",
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "confidentiality",
+        "input_type": "select",
+        "var_type": "string",
+        "input_placeholder": "Confidentiality level",
+        "input_options": [
+          {
+            "slug": "public",
+            "title": "Public"
+          },
+          {
+            "slug": "internal",
+            "title": "Internal"
+          },
+          {
+            "slug": "confidential",
+            "title": "Confidential"
+          },
+          {
+            "slug": "restricted",
+            "title": "Restricted"
+          }
+        ],
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "notes",
+        "input_type": "editorjs",
+        "var_type": "array",
+        "input_placeholder": "Additional notes"
+      },
+      {
+        "input_slug": "document_url",
+        "input_type": "url",
+        "var_type": "string",
+        "input_placeholder": "Document URL"
+      },
+      {
+        "input_slug": "files",
+        "input_type": "file_uploader",
+        "var_type": "array",
+        "input_placeholder": "Upload document files"
+      },
+      {
+        "input_slug": "content_privacy",
+        "input_placeholder": "Content privacy",
+        "input_type": "select",
+        "input_options": [
+          {
+            "slug": "public",
+            "title": "Public link"
+          },
+          {
+            "slug": "private",
+            "title": "Private link"
+          },
+          {
+            "slug": "pending",
+            "title": "Submit for moderation"
+          },
+          {
+            "slug": "draft",
+            "title": "Draft"
+          }
+        ],
+        "list_field": false,
+        "input_unique": false
+      }
+    ],
+    "primary_module": "title",
+    "total_objects": 0
+  }
+}

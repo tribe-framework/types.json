@@ -1,0 +1,561 @@
+{
+  "product": {
+    "type": "content",
+    "slug": "product",
+    "name": "product",
+    "plural": "products",
+    "description": "Detailed information about inventory items.",
+    "readonly": false,
+    "sendable": false,
+    "editable": true,
+    "modules": [
+      {
+        "input_slug": "title",
+        "input_primary": true,
+        "input_type": "text",
+        "var_type": "string",
+        "input_placeholder": "Product name",
+        "input_unique": false,
+        "list_field": true,
+        "list_searchable": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "sku",
+        "input_type": "text",
+        "var_type": "string",
+        "input_placeholder": "Stock Keeping Unit",
+        "input_unique": true,
+        "list_field": true,
+        "list_searchable": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "barcode",
+        "input_type": "text",
+        "var_type": "string",
+        "input_placeholder": "Product barcode",
+        "input_unique": true,
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "description",
+        "input_type": "editorjs",
+        "var_type": "array",
+        "input_placeholder": "Product description"
+      },
+      {
+        "input_slug": "category",
+        "input_type": "select",
+        "var_type": "string",
+        "input_placeholder": "Product category",
+        "input_options": [
+          {
+            "slug": "electronics",
+            "title": "Electronics"
+          },
+          {
+            "slug": "clothing",
+            "title": "Clothing"
+          },
+          {
+            "slug": "food",
+            "title": "Food & Beverages"
+          },
+          {
+            "slug": "office",
+            "title": "Office Supplies"
+          },
+          {
+            "slug": "furniture",
+            "title": "Furniture"
+          }
+        ],
+        "list_field": true,
+        "list_searchable": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "suppliers",
+        "input_type": "select",
+        "var_type": "array",
+        "input_placeholder": "Product suppliers",
+        "linked_type": "supplier",
+        "input_multiple": true,
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "unit_price",
+        "input_type": "number",
+        "var_type": "float",
+        "input_placeholder": "Unit price",
+        "list_field": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "current_stock",
+        "input_type": "number",
+        "var_type": "int",
+        "input_placeholder": "Current stock level",
+        "list_field": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "minimum_stock",
+        "input_type": "number",
+        "var_type": "int",
+        "input_placeholder": "Minimum stock level for reorder"
+      },
+      {
+        "input_slug": "reorder_quantity",
+        "input_type": "number",
+        "var_type": "int",
+        "input_placeholder": "Suggested reorder quantity"
+      },
+      {
+        "input_slug": "location",
+        "input_type": "text",
+        "var_type": "string",
+        "input_placeholder": "Storage location",
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "product_images",
+        "input_type": "url",
+        "var_type": "array",
+        "input_multiple": true,
+        "input_placeholder": "Product image URLs"
+      },
+      {
+        "input_slug": "files",
+        "input_type": "file_uploader",
+        "var_type": "array",
+        "input_placeholder": "Upload product images or documents"
+      },
+      {
+        "input_slug": "content_privacy",
+        "input_placeholder": "Content privacy",
+        "input_type": "select",
+        "input_options": [
+          {
+            "slug": "public",
+            "title": "Public link"
+          },
+          {
+            "slug": "private",
+            "title": "Private link"
+          },
+          {
+            "slug": "pending",
+            "title": "Submit for moderation"
+          },
+          {
+            "slug": "draft",
+            "title": "Draft"
+          }
+        ],
+        "list_field": false,
+        "input_unique": false
+      }
+    ],
+    "primary_module": "title",
+    "total_objects": 0
+  },
+  "supplier": {
+    "type": "content",
+    "slug": "supplier",
+    "name": "supplier",
+    "plural": "suppliers",
+    "description": "Information about product suppliers.",
+    "readonly": false,
+    "sendable": false,
+    "editable": true,
+    "modules": [
+      {
+        "input_slug": "title",
+        "input_primary": true,
+        "input_type": "text",
+        "var_type": "string",
+        "input_placeholder": "Supplier name",
+        "input_unique": true,
+        "list_field": true,
+        "list_searchable": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "contact_person",
+        "input_type": "text",
+        "var_type": "string",
+        "input_placeholder": "Primary contact person",
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "email",
+        "input_type": "email",
+        "var_type": "string",
+        "input_placeholder": "Contact email",
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "phone",
+        "input_type": "tel",
+        "var_type": "string",
+        "input_placeholder": "Contact phone number",
+        "list_field": true
+      },
+      {
+        "input_slug": "address",
+        "input_type": "textarea",
+        "var_type": "string",
+        "input_placeholder": "Supplier address",
+        "list_searchable": true
+      },
+      {
+        "input_slug": "website",
+        "input_type": "url",
+        "var_type": "string",
+        "input_placeholder": "Supplier website"
+      },
+      {
+        "input_slug": "payment_terms",
+        "input_type": "text",
+        "var_type": "string",
+        "input_placeholder": "Payment terms"
+      },
+      {
+        "input_slug": "lead_time_days",
+        "input_type": "number",
+        "var_type": "int",
+        "input_placeholder": "Average lead time in days",
+        "list_field": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "notes",
+        "input_type": "textarea",
+        "var_type": "string",
+        "input_placeholder": "Additional notes about supplier",
+        "list_searchable": true
+      },
+      {
+        "input_slug": "logo_url",
+        "input_type": "url",
+        "var_type": "string",
+        "input_placeholder": "Supplier logo URL"
+      },
+      {
+        "input_slug": "files",
+        "input_type": "file_uploader",
+        "var_type": "array",
+        "input_placeholder": "Upload supplier documents or images"
+      },
+      {
+        "input_slug": "content_privacy",
+        "input_placeholder": "Content privacy",
+        "input_type": "select",
+        "input_options": [
+          {
+            "slug": "public",
+            "title": "Public link"
+          },
+          {
+            "slug": "private",
+            "title": "Private link"
+          },
+          {
+            "slug": "pending",
+            "title": "Submit for moderation"
+          },
+          {
+            "slug": "draft",
+            "title": "Draft"
+          }
+        ],
+        "list_field": false,
+        "input_unique": false
+      }
+    ],
+    "primary_module": "title",
+    "total_objects": 0
+  },
+  "stock_movement": {
+    "type": "content",
+    "slug": "stock_movement",
+    "name": "stock movement",
+    "plural": "stock movements",
+    "description": "Record of inventory changes.",
+    "readonly": false,
+    "sendable": false,
+    "editable": true,
+    "modules": [
+      {
+        "input_slug": "title",
+        "input_primary": true,
+        "input_type": "text",
+        "var_type": "string",
+        "input_placeholder": "Movement reference",
+        "input_unique": true,
+        "list_field": true,
+        "list_searchable": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "product",
+        "input_type": "select",
+        "var_type": "string",
+        "input_placeholder": "Select product",
+        "linked_type": "product",
+        "list_field": true,
+        "list_searchable": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "movement_type",
+        "input_type": "select",
+        "var_type": "string",
+        "input_placeholder": "Type of movement",
+        "input_options": [
+          {
+            "slug": "purchase",
+            "title": "Purchase"
+          },
+          {
+            "slug": "sale",
+            "title": "Sale"
+          },
+          {
+            "slug": "return",
+            "title": "Return"
+          },
+          {
+            "slug": "adjustment",
+            "title": "Adjustment"
+          },
+          {
+            "slug": "transfer",
+            "title": "Transfer"
+          }
+        ],
+        "list_field": true,
+        "list_searchable": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "quantity",
+        "input_type": "number",
+        "var_type": "int",
+        "input_placeholder": "Quantity (negative for outgoing)",
+        "list_field": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "date",
+        "input_type": "datetime-local",
+        "var_type": "string",
+        "input_placeholder": "Date and time of movement",
+        "list_field": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "supplier",
+        "input_type": "select",
+        "var_type": "string",
+        "input_placeholder": "Related supplier (for purchases)",
+        "linked_type": "supplier",
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "order_reference",
+        "input_type": "text",
+        "var_type": "string",
+        "input_placeholder": "Purchase or sales order reference",
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "notes",
+        "input_type": "textarea",
+        "var_type": "string",
+        "input_placeholder": "Additional notes",
+        "list_searchable": true
+      },
+      {
+        "input_slug": "content_privacy",
+        "input_placeholder": "Content privacy",
+        "input_type": "select",
+        "input_options": [
+          {
+            "slug": "public",
+            "title": "Public link"
+          },
+          {
+            "slug": "private",
+            "title": "Private link"
+          },
+          {
+            "slug": "pending",
+            "title": "Submit for moderation"
+          },
+          {
+            "slug": "draft",
+            "title": "Draft"
+          }
+        ],
+        "list_field": false,
+        "input_unique": false
+      }
+    ],
+    "primary_module": "title",
+    "total_objects": 0
+  },
+  "inventory_alert": {
+    "type": "content",
+    "slug": "inventory_alert",
+    "name": "inventory alert",
+    "plural": "inventory alerts",
+    "description": "Notifications for low stock and reorder requirements.",
+    "readonly": false,
+    "sendable": false,
+    "editable": true,
+    "modules": [
+      {
+        "input_slug": "title",
+        "input_primary": true,
+        "input_type": "text",
+        "var_type": "string",
+        "input_placeholder": "Alert title",
+        "input_unique": false,
+        "list_field": true,
+        "list_searchable": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "product",
+        "input_type": "select",
+        "var_type": "string",
+        "input_placeholder": "Product requiring attention",
+        "linked_type": "product",
+        "list_field": true,
+        "list_searchable": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "alert_type",
+        "input_type": "select",
+        "var_type": "string",
+        "input_placeholder": "Type of alert",
+        "input_options": [
+          {
+            "slug": "low_stock",
+            "title": "Low Stock"
+          },
+          {
+            "slug": "reorder",
+            "title": "Reorder Required"
+          },
+          {
+            "slug": "overstock",
+            "title": "Overstock"
+          },
+          {
+            "slug": "expiry",
+            "title": "Approaching Expiry"
+          }
+        ],
+        "list_field": true,
+        "list_searchable": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "current_stock",
+        "input_type": "number",
+        "var_type": "int",
+        "input_placeholder": "Current stock level",
+        "list_field": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "threshold",
+        "input_type": "number",
+        "var_type": "int",
+        "input_placeholder": "Alert threshold level",
+        "list_field": true
+      },
+      {
+        "input_slug": "date_created",
+        "input_type": "datetime-local",
+        "var_type": "string",
+        "input_placeholder": "Date alert was created",
+        "list_field": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "status",
+        "input_type": "select",
+        "var_type": "string",
+        "input_placeholder": "Alert status",
+        "input_options": [
+          {
+            "slug": "new",
+            "title": "New"
+          },
+          {
+            "slug": "acknowledged",
+            "title": "Acknowledged"
+          },
+          {
+            "slug": "resolved",
+            "title": "Resolved"
+          },
+          {
+            "slug": "ignored",
+            "title": "Ignored"
+          }
+        ],
+        "list_field": true,
+        "list_searchable": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "notes",
+        "input_type": "textarea",
+        "var_type": "string",
+        "input_placeholder": "Additional notes or actions taken",
+        "list_searchable": true
+      },
+      {
+        "input_slug": "content_privacy",
+        "input_placeholder": "Content privacy",
+        "input_type": "select",
+        "input_options": [
+          {
+            "slug": "public",
+            "title": "Public link"
+          },
+          {
+            "slug": "private",
+            "title": "Private link"
+          },
+          {
+            "slug": "pending",
+            "title": "Submit for moderation"
+          },
+          {
+            "slug": "draft",
+            "title": "Draft"
+          }
+        ],
+        "list_field": false,
+        "input_unique": false
+      }
+    ],
+    "primary_module": "title",
+    "total_objects": 0
+  }
+}

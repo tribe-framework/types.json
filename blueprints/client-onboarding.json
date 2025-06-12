@@ -1,0 +1,1312 @@
+{
+  "client": {
+    "type": "content",
+    "slug": "client",
+    "name": "client",
+    "plural": "clients",
+    "description": "Client organization information.",
+    "readonly": false,
+    "sendable": false,
+    "editable": true,
+    "modules": [
+      {
+        "input_slug": "title",
+        "input_primary": true,
+        "input_type": "text",
+        "var_type": "string",
+        "input_placeholder": "Client name",
+        "input_unique": true,
+        "list_field": true,
+        "list_searchable": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "description",
+        "input_type": "textarea",
+        "var_type": "string",
+        "input_placeholder": "Brief description of client",
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "industry",
+        "input_type": "text",
+        "var_type": "string",
+        "input_placeholder": "Client industry",
+        "list_field": true,
+        "list_searchable": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "onboarding_stage",
+        "input_type": "select",
+        "var_type": "string",
+        "input_placeholder": "Current onboarding stage",
+        "input_options": [
+          {
+            "slug": "initial_contact",
+            "title": "Initial Contact"
+          },
+          {
+            "slug": "document_collection",
+            "title": "Document Collection"
+          },
+          {
+            "slug": "setup",
+            "title": "Account Setup"
+          },
+          {
+            "slug": "training",
+            "title": "Training"
+          },
+          {
+            "slug": "handoff",
+            "title": "Account Handoff"
+          },
+          {
+            "slug": "completed",
+            "title": "Onboarding Completed"
+          }
+        ],
+        "list_field": true,
+        "list_searchable": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "start_date",
+        "input_type": "date",
+        "var_type": "string",
+        "input_placeholder": "Onboarding start date",
+        "list_field": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "target_completion_date",
+        "input_type": "date",
+        "var_type": "string",
+        "input_placeholder": "Target completion date",
+        "list_field": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "website",
+        "input_type": "url",
+        "var_type": "string",
+        "input_placeholder": "Client website"
+      },
+      {
+        "input_slug": "logo_url",
+        "input_type": "url",
+        "var_type": "string",
+        "input_placeholder": "Client logo URL"
+      },
+      {
+        "input_slug": "files",
+        "input_type": "file_uploader",
+        "var_type": "array",
+        "input_placeholder": "Client files and documents"
+      },
+      {
+        "input_slug": "content_privacy",
+        "input_placeholder": "Content privacy",
+        "input_type": "select",
+        "input_options": [
+          {
+            "slug": "public",
+            "title": "Public link"
+          },
+          {
+            "slug": "private",
+            "title": "Private link"
+          },
+          {
+            "slug": "pending",
+            "title": "Submit for moderation"
+          },
+          {
+            "slug": "draft",
+            "title": "Draft"
+          }
+        ],
+        "list_field": false,
+        "input_unique": false
+      }
+    ],
+    "primary_module": "title",
+    "total_objects": 0
+  },
+  "contact": {
+    "type": "content",
+    "slug": "contact",
+    "name": "contact",
+    "plural": "contacts",
+    "description": "Client contact information.",
+    "readonly": false,
+    "sendable": false,
+    "editable": true,
+    "modules": [
+      {
+        "input_slug": "title",
+        "input_primary": true,
+        "input_type": "text",
+        "var_type": "string",
+        "input_placeholder": "Contact name",
+        "input_unique": false,
+        "list_field": true,
+        "list_searchable": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "client",
+        "input_type": "select",
+        "var_type": "string",
+        "input_placeholder": "Associated client",
+        "linked_type": "client",
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "role",
+        "input_type": "text",
+        "var_type": "string",
+        "input_placeholder": "Role/position",
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "email",
+        "input_type": "email",
+        "var_type": "string",
+        "input_placeholder": "Email address",
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "phone",
+        "input_type": "tel",
+        "var_type": "string",
+        "input_placeholder": "Phone number",
+        "list_field": true
+      },
+      {
+        "input_slug": "is_primary",
+        "input_type": "select",
+        "var_type": "bool",
+        "input_placeholder": "Primary contact?",
+        "input_options": [
+          {
+            "slug": "true",
+            "title": "Yes"
+          },
+          {
+            "slug": "false",
+            "title": "No"
+          }
+        ],
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "notes",
+        "input_type": "textarea",
+        "var_type": "string",
+        "input_placeholder": "Additional notes about this contact"
+      },
+      {
+        "input_slug": "content_privacy",
+        "input_placeholder": "Content privacy",
+        "input_type": "select",
+        "input_options": [
+          {
+            "slug": "public",
+            "title": "Public link"
+          },
+          {
+            "slug": "private",
+            "title": "Private link"
+          },
+          {
+            "slug": "pending",
+            "title": "Submit for moderation"
+          },
+          {
+            "slug": "draft",
+            "title": "Draft"
+          }
+        ],
+        "list_field": false,
+        "input_unique": false
+      }
+    ],
+    "primary_module": "title",
+    "total_objects": 0
+  },
+  "checklist": {
+    "type": "content",
+    "slug": "checklist",
+    "name": "checklist",
+    "plural": "checklists",
+    "description": "Onboarding checklists for clients.",
+    "readonly": false,
+    "sendable": false,
+    "editable": true,
+    "modules": [
+      {
+        "input_slug": "title",
+        "input_primary": true,
+        "input_type": "text",
+        "var_type": "string",
+        "input_placeholder": "Checklist name",
+        "input_unique": false,
+        "list_field": true,
+        "list_searchable": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "client",
+        "input_type": "select",
+        "var_type": "string",
+        "input_placeholder": "Associated client",
+        "linked_type": "client",
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "category",
+        "input_type": "select",
+        "var_type": "string",
+        "input_placeholder": "Checklist category",
+        "input_options": [
+          {
+            "slug": "documentation",
+            "title": "Documentation"
+          },
+          {
+            "slug": "account_setup",
+            "title": "Account Setup"
+          },
+          {
+            "slug": "training",
+            "title": "Training"
+          },
+          {
+            "slug": "compliance",
+            "title": "Compliance"
+          },
+          {
+            "slug": "technical",
+            "title": "Technical Integration"
+          }
+        ],
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "description",
+        "input_type": "textarea",
+        "var_type": "string",
+        "input_placeholder": "Checklist description",
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "due_date",
+        "input_type": "date",
+        "var_type": "string",
+        "input_placeholder": "Due date",
+        "list_field": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "status",
+        "input_type": "select",
+        "var_type": "string",
+        "input_placeholder": "Current status",
+        "input_options": [
+          {
+            "slug": "not_started",
+            "title": "Not Started"
+          },
+          {
+            "slug": "in_progress",
+            "title": "In Progress"
+          },
+          {
+            "slug": "waiting_approval",
+            "title": "Waiting for Approval"
+          },
+          {
+            "slug": "completed",
+            "title": "Completed"
+          }
+        ],
+        "list_field": true,
+        "list_searchable": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "assigned_to",
+        "input_type": "select",
+        "var_type": "array",
+        "input_multiple": true,
+        "input_placeholder": "Team members assigned",
+        "linked_type": "team_member",
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "tasks",
+        "input_type": "select",
+        "var_type": "array",
+        "input_multiple": true,
+        "input_placeholder": "Tasks in this checklist",
+        "linked_type": "task",
+        "list_field": true
+      },
+      {
+        "input_slug": "completion_date",
+        "input_type": "date",
+        "var_type": "string",
+        "input_placeholder": "Actual completion date",
+        "list_field": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "content_privacy",
+        "input_placeholder": "Content privacy",
+        "input_type": "select",
+        "input_options": [
+          {
+            "slug": "public",
+            "title": "Public link"
+          },
+          {
+            "slug": "private",
+            "title": "Private link"
+          },
+          {
+            "slug": "pending",
+            "title": "Submit for moderation"
+          },
+          {
+            "slug": "draft",
+            "title": "Draft"
+          }
+        ],
+        "list_field": false,
+        "input_unique": false
+      }
+    ],
+    "primary_module": "title",
+    "total_objects": 0
+  },
+  "task": {
+    "type": "content",
+    "slug": "task",
+    "name": "task",
+    "plural": "tasks",
+    "description": "Individual tasks within onboarding checklists.",
+    "readonly": false,
+    "sendable": false,
+    "editable": true,
+    "modules": [
+      {
+        "input_slug": "title",
+        "input_primary": true,
+        "input_type": "text",
+        "var_type": "string",
+        "input_placeholder": "Task name",
+        "input_unique": false,
+        "list_field": true,
+        "list_searchable": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "description",
+        "input_type": "textarea",
+        "var_type": "string",
+        "input_placeholder": "Task description",
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "status",
+        "input_type": "select",
+        "var_type": "string",
+        "input_placeholder": "Task status",
+        "input_options": [
+          {
+            "slug": "pending",
+            "title": "Pending"
+          },
+          {
+            "slug": "in_progress",
+            "title": "In Progress"
+          },
+          {
+            "slug": "completed",
+            "title": "Completed"
+          },
+          {
+            "slug": "blocked",
+            "title": "Blocked"
+          }
+        ],
+        "list_field": true,
+        "list_searchable": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "assigned_to",
+        "input_type": "select",
+        "var_type": "string",
+        "input_placeholder": "Assigned team member",
+        "linked_type": "team_member",
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "due_date",
+        "input_type": "date",
+        "var_type": "string",
+        "input_placeholder": "Due date",
+        "list_field": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "completion_date",
+        "input_type": "date",
+        "var_type": "string",
+        "input_placeholder": "Completion date",
+        "list_field": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "priority",
+        "input_type": "select",
+        "var_type": "string",
+        "input_placeholder": "Priority level",
+        "input_options": [
+          {
+            "slug": "low",
+            "title": "Low"
+          },
+          {
+            "slug": "medium",
+            "title": "Medium"
+          },
+          {
+            "slug": "high",
+            "title": "High"
+          },
+          {
+            "slug": "critical",
+            "title": "Critical"
+          }
+        ],
+        "list_field": true,
+        "list_searchable": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "notes",
+        "input_type": "textarea",
+        "var_type": "string",
+        "input_placeholder": "Additional notes"
+      },
+      {
+        "input_slug": "content_privacy",
+        "input_placeholder": "Content privacy",
+        "input_type": "select",
+        "input_options": [
+          {
+            "slug": "public",
+            "title": "Public link"
+          },
+          {
+            "slug": "private",
+            "title": "Private link"
+          },
+          {
+            "slug": "pending",
+            "title": "Submit for moderation"
+          },
+          {
+            "slug": "draft",
+            "title": "Draft"
+          }
+        ],
+        "list_field": false,
+        "input_unique": false
+      }
+    ],
+    "primary_module": "title",
+    "total_objects": 0
+  },
+  "document_request": {
+    "type": "content",
+    "slug": "document_request",
+    "name": "document request",
+    "plural": "document requests",
+    "description": "Documents requested from clients during onboarding.",
+    "readonly": false,
+    "sendable": false,
+    "editable": true,
+    "modules": [
+      {
+        "input_slug": "title",
+        "input_primary": true,
+        "input_type": "text",
+        "var_type": "string",
+        "input_placeholder": "Document name",
+        "input_unique": false,
+        "list_field": true,
+        "list_searchable": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "client",
+        "input_type": "select",
+        "var_type": "string",
+        "input_placeholder": "Associated client",
+        "linked_type": "client",
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "document_type",
+        "input_type": "select",
+        "var_type": "string",
+        "input_placeholder": "Document type",
+        "input_options": [
+          {
+            "slug": "identification",
+            "title": "Identification"
+          },
+          {
+            "slug": "financial",
+            "title": "Financial"
+          },
+          {
+            "slug": "legal",
+            "title": "Legal"
+          },
+          {
+            "slug": "technical",
+            "title": "Technical Specifications"
+          },
+          {
+            "slug": "other",
+            "title": "Other"
+          }
+        ],
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "description",
+        "input_type": "textarea",
+        "var_type": "string",
+        "input_placeholder": "Document description and requirements",
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "status",
+        "input_type": "select",
+        "var_type": "string",
+        "input_placeholder": "Request status",
+        "input_options": [
+          {
+            "slug": "not_requested",
+            "title": "Not Requested"
+          },
+          {
+            "slug": "requested",
+            "title": "Requested"
+          },
+          {
+            "slug": "received",
+            "title": "Received"
+          },
+          {
+            "slug": "approved",
+            "title": "Approved"
+          },
+          {
+            "slug": "rejected",
+            "title": "Rejected"
+          }
+        ],
+        "list_field": true,
+        "list_searchable": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "request_date",
+        "input_type": "date",
+        "var_type": "string",
+        "input_placeholder": "Date requested",
+        "list_field": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "due_date",
+        "input_type": "date",
+        "var_type": "string",
+        "input_placeholder": "Due date",
+        "list_field": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "received_date",
+        "input_type": "date",
+        "var_type": "string",
+        "input_placeholder": "Date received",
+        "list_field": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "document_url",
+        "input_type": "url",
+        "var_type": "string",
+        "input_placeholder": "Link to document (if stored externally)"
+      },
+      {
+        "input_slug": "notes",
+        "input_type": "textarea",
+        "var_type": "string",
+        "input_placeholder": "Additional notes"
+      },
+      {
+        "input_slug": "files",
+        "input_type": "file_uploader",
+        "var_type": "array",
+        "input_placeholder": "Upload documents"
+      },
+      {
+        "input_slug": "content_privacy",
+        "input_placeholder": "Content privacy",
+        "input_type": "select",
+        "input_options": [
+          {
+            "slug": "public",
+            "title": "Public link"
+          },
+          {
+            "slug": "private",
+            "title": "Private link"
+          },
+          {
+            "slug": "pending",
+            "title": "Submit for moderation"
+          },
+          {
+            "slug": "draft",
+            "title": "Draft"
+          }
+        ],
+        "list_field": false,
+        "input_unique": false
+      }
+    ],
+    "primary_module": "title",
+    "total_objects": 0
+  },
+  "approval": {
+    "type": "content",
+    "slug": "approval",
+    "name": "approval",
+    "plural": "approvals",
+    "description": "Approval records for client onboarding stages.",
+    "readonly": false,
+    "sendable": false,
+    "editable": true,
+    "modules": [
+      {
+        "input_slug": "title",
+        "input_primary": true,
+        "input_type": "text",
+        "var_type": "string",
+        "input_placeholder": "Approval name",
+        "input_unique": false,
+        "list_field": true,
+        "list_searchable": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "client",
+        "input_type": "select",
+        "var_type": "string",
+        "input_placeholder": "Associated client",
+        "linked_type": "client",
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "stage",
+        "input_type": "select",
+        "var_type": "string",
+        "input_placeholder": "Onboarding stage",
+        "input_options": [
+          {
+            "slug": "document_verification",
+            "title": "Document Verification"
+          },
+          {
+            "slug": "account_setup",
+            "title": "Account Setup"
+          },
+          {
+            "slug": "training_completion",
+            "title": "Training Completion"
+          },
+          {
+            "slug": "final_handoff",
+            "title": "Final Handoff"
+          }
+        ],
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "status",
+        "input_type": "select",
+        "var_type": "string",
+        "input_placeholder": "Approval status",
+        "input_options": [
+          {
+            "slug": "pending",
+            "title": "Pending"
+          },
+          {
+            "slug": "approved",
+            "title": "Approved"
+          },
+          {
+            "slug": "rejected",
+            "title": "Rejected"
+          },
+          {
+            "slug": "waiting_info",
+            "title": "Waiting for Information"
+          }
+        ],
+        "list_field": true,
+        "list_searchable": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "approver",
+        "input_type": "select",
+        "var_type": "string",
+        "input_placeholder": "Approving team member",
+        "linked_type": "team_member",
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "submission_date",
+        "input_type": "date",
+        "var_type": "string",
+        "input_placeholder": "Date submitted for approval",
+        "list_field": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "decision_date",
+        "input_type": "date",
+        "var_type": "string",
+        "input_placeholder": "Date of approval decision",
+        "list_field": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "notes",
+        "input_type": "textarea",
+        "var_type": "string",
+        "input_placeholder": "Approval notes and feedback",
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "details",
+        "input_type": "editorjs",
+        "var_type": "array",
+        "input_placeholder": "Detailed approval information"
+      },
+      {
+        "input_slug": "content_privacy",
+        "input_placeholder": "Content privacy",
+        "input_type": "select",
+        "input_options": [
+          {
+            "slug": "public",
+            "title": "Public link"
+          },
+          {
+            "slug": "private",
+            "title": "Private link"
+          },
+          {
+            "slug": "pending",
+            "title": "Submit for moderation"
+          },
+          {
+            "slug": "draft",
+            "title": "Draft"
+          }
+        ],
+        "list_field": false,
+        "input_unique": false
+      }
+    ],
+    "primary_module": "title",
+    "total_objects": 0
+  },
+  "team_member": {
+    "type": "content",
+    "slug": "team_member",
+    "name": "team member",
+    "plural": "team members",
+    "description": "Internal team members involved in client onboarding.",
+    "readonly": false,
+    "sendable": false,
+    "editable": true,
+    "modules": [
+      {
+        "input_slug": "title",
+        "input_primary": true,
+        "input_type": "text",
+        "var_type": "string",
+        "input_placeholder": "Team member name",
+        "input_unique": false,
+        "list_field": true,
+        "list_searchable": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "role",
+        "input_type": "select",
+        "var_type": "string",
+        "input_placeholder": "Team role",
+        "input_options": [
+          {
+            "slug": "account_manager",
+            "title": "Account Manager"
+          },
+          {
+            "slug": "onboarding_specialist",
+            "title": "Onboarding Specialist"
+          },
+          {
+            "slug": "technical_support",
+            "title": "Technical Support"
+          },
+          {
+            "slug": "compliance_officer",
+            "title": "Compliance Officer"
+          },
+          {
+            "slug": "trainer",
+            "title": "Trainer"
+          },
+          {
+            "slug": "administrator",
+            "title": "Administrator"
+          }
+        ],
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "email",
+        "input_type": "email",
+        "var_type": "string",
+        "input_placeholder": "Email address",
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "phone",
+        "input_type": "tel",
+        "var_type": "string",
+        "input_placeholder": "Phone number",
+        "list_field": true
+      },
+      {
+        "input_slug": "department",
+        "input_type": "text",
+        "var_type": "string",
+        "input_placeholder": "Department",
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "clients",
+        "input_type": "select",
+        "var_type": "array",
+        "input_multiple": true,
+        "input_placeholder": "Assigned clients",
+        "linked_type": "client",
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "bio",
+        "input_type": "textarea",
+        "var_type": "string",
+        "input_placeholder": "Team member bio"
+      },
+      {
+        "input_slug": "photo_url",
+        "input_type": "url",
+        "var_type": "string",
+        "input_placeholder": "Profile photo URL"
+      },
+      {
+        "input_slug": "files",
+        "input_type": "file_uploader",
+        "var_type": "array",
+        "input_placeholder": "Team member documents"
+      },
+      {
+        "input_slug": "content_privacy",
+        "input_placeholder": "Content privacy",
+        "input_type": "select",
+        "input_options": [
+          {
+            "slug": "public",
+            "title": "Public link"
+          },
+          {
+            "slug": "private",
+            "title": "Private link"
+          },
+          {
+            "slug": "pending",
+            "title": "Submit for moderation"
+          },
+          {
+            "slug": "draft",
+            "title": "Draft"
+          }
+        ],
+        "list_field": false,
+        "input_unique": false
+      }
+    ],
+    "primary_module": "title",
+    "total_objects": 0
+  },
+  "notification": {
+    "type": "content",
+    "slug": "notification",
+    "name": "notification",
+    "plural": "notifications",
+    "description": "System notifications for onboarding activities.",
+    "readonly": false,
+    "sendable": false,
+    "editable": true,
+    "modules": [
+      {
+        "input_slug": "title",
+        "input_primary": true,
+        "input_type": "text",
+        "var_type": "string",
+        "input_placeholder": "Notification title",
+        "input_unique": false,
+        "list_field": true,
+        "list_searchable": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "message",
+        "input_type": "textarea",
+        "var_type": "string",
+        "input_placeholder": "Notification message",
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "type",
+        "input_type": "select",
+        "var_type": "string",
+        "input_placeholder": "Notification type",
+        "input_options": [
+          {
+            "slug": "task_assigned",
+            "title": "Task Assigned"
+          },
+          {
+            "slug": "document_received",
+            "title": "Document Received"
+          },
+          {
+            "slug": "approval_needed",
+            "title": "Approval Needed"
+          },
+          {
+            "slug": "deadline_approaching",
+            "title": "Deadline Approaching"
+          },
+          {
+            "slug": "stage_completed",
+            "title": "Stage Completed"
+          },
+          {
+            "slug": "onboarding_completed",
+            "title": "Onboarding Completed"
+          }
+        ],
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "priority",
+        "input_type": "select",
+        "var_type": "string",
+        "input_placeholder": "Priority level",
+        "input_options": [
+          {
+            "slug": "low",
+            "title": "Low"
+          },
+          {
+            "slug": "medium",
+            "title": "Medium"
+          },
+          {
+            "slug": "high",
+            "title": "High"
+          },
+          {
+            "slug": "urgent",
+            "title": "Urgent"
+          }
+        ],
+        "list_field": true,
+        "list_searchable": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "recipients",
+        "input_type": "select",
+        "var_type": "array",
+        "input_multiple": true,
+        "input_placeholder": "Team members to notify",
+        "linked_type": "team_member",
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "client",
+        "input_type": "select",
+        "var_type": "string",
+        "input_placeholder": "Related client",
+        "linked_type": "client",
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "created_date",
+        "input_type": "datetime-local",
+        "var_type": "string",
+        "input_placeholder": "Creation date and time",
+        "list_field": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "read_status",
+        "input_type": "select",
+        "var_type": "string",
+        "input_placeholder": "Read status",
+        "input_options": [
+          {
+            "slug": "unread",
+            "title": "Unread"
+          },
+          {
+            "slug": "read",
+            "title": "Read"
+          }
+        ],
+        "list_field": true,
+        "list_searchable": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "action_url",
+        "input_type": "url",
+        "var_type": "string",
+        "input_placeholder": "Action link URL"
+      },
+      {
+        "input_slug": "content_privacy",
+        "input_placeholder": "Content privacy",
+        "input_type": "select",
+        "input_options": [
+          {
+            "slug": "public",
+            "title": "Public link"
+          },
+          {
+            "slug": "private",
+            "title": "Private link"
+          },
+          {
+            "slug": "pending",
+            "title": "Submit for moderation"
+          },
+          {
+            "slug": "draft",
+            "title": "Draft"
+          }
+        ],
+        "list_field": false,
+        "input_unique": false
+      }
+    ],
+    "primary_module": "title",
+    "total_objects": 0
+  },
+  "onboarding_note": {
+    "type": "content",
+    "slug": "onboarding_note",
+    "name": "onboarding note",
+    "plural": "onboarding notes",
+    "description": "Detailed notes about client onboarding process.",
+    "readonly": false,
+    "sendable": false,
+    "editable": true,
+    "modules": [
+      {
+        "input_slug": "title",
+        "input_primary": true,
+        "input_type": "text",
+        "var_type": "string",
+        "input_placeholder": "Note title",
+        "input_unique": false,
+        "list_field": true,
+        "list_searchable": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "client",
+        "input_type": "select",
+        "var_type": "string",
+        "input_placeholder": "Associated client",
+        "linked_type": "client",
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "author",
+        "input_type": "select",
+        "var_type": "string",
+        "input_placeholder": "Note author",
+        "linked_type": "team_member",
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "date_created",
+        "input_type": "datetime-local",
+        "var_type": "string",
+        "input_placeholder": "Creation date and time",
+        "list_field": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "category",
+        "input_type": "select",
+        "var_type": "string",
+        "input_placeholder": "Note category",
+        "input_options": [
+          {
+            "slug": "client_communication",
+            "title": "Client Communication"
+          },
+          {
+            "slug": "internal_discussion",
+            "title": "Internal Discussion"
+          },
+          {
+            "slug": "issue",
+            "title": "Issue or Problem"
+          },
+          {
+            "slug": "decision",
+            "title": "Decision Record"
+          },
+          {
+            "slug": "general",
+            "title": "General Note"
+          }
+        ],
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "visibility",
+        "input_type": "select",
+        "var_type": "string",
+        "input_placeholder": "Note visibility",
+        "input_options": [
+          {
+            "slug": "internal_only",
+            "title": "Internal Only"
+          },
+          {
+            "slug": "client_visible",
+            "title": "Client Visible"
+          }
+        ],
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "content",
+        "input_type": "editorjs",
+        "var_type": "array",
+        "input_placeholder": "Note content"
+      },
+      {
+        "input_slug": "related_tasks",
+        "input_type": "select",
+        "var_type": "array",
+        "input_multiple": true,
+        "input_placeholder": "Related tasks",
+        "linked_type": "task",
+        "list_field": true
+      },
+      {
+        "input_slug": "content_privacy",
+        "input_placeholder": "Content privacy",
+        "input_type": "select",
+        "input_options": [
+          {
+            "slug": "public",
+            "title": "Public link"
+          },
+          {
+            "slug": "private",
+            "title": "Private link"
+          },
+          {
+            "slug": "pending",
+            "title": "Submit for moderation"
+          },
+          {
+            "slug": "draft",
+            "title": "Draft"
+          }
+        ],
+        "list_field": false,
+        "input_unique": false
+      }
+    ],
+    "primary_module": "title",
+    "total_objects": 0
+  }
+}

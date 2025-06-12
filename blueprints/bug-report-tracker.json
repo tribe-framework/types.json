@@ -1,0 +1,422 @@
+{
+  "bug": {
+    "type": "content",
+    "slug": "bug",
+    "name": "bug",
+    "plural": "bugs",
+    "description": "Software issues and bugs reported in the system.",
+    "readonly": false,
+    "sendable": false,
+    "editable": true,
+    "modules": [
+      {
+        "input_slug": "title",
+        "input_primary": true,
+        "input_type": "text",
+        "var_type": "string",
+        "input_placeholder": "Bug title or summary",
+        "input_unique": false,
+        "list_field": true,
+        "list_searchable": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "description",
+        "input_placeholder": "Detailed description of the bug",
+        "input_type": "textarea",
+        "var_type": "string",
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "severity",
+        "input_placeholder": "Bug severity level",
+        "input_options": [
+          {
+            "slug": "critical",
+            "title": "Critical"
+          },
+          {
+            "slug": "major",
+            "title": "Major"
+          },
+          {
+            "slug": "minor",
+            "title": "Minor"
+          },
+          {
+            "slug": "trivial",
+            "title": "Trivial"
+          },
+          {
+            "slug": "enhancement",
+            "title": "Enhancement"
+          }
+        ],
+        "input_type": "select",
+        "var_type": "string",
+        "input_multiple": false,
+        "list_field": true,
+        "list_searchable": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "status",
+        "input_placeholder": "Current status",
+        "input_options": [
+          {
+            "slug": "new",
+            "title": "New"
+          },
+          {
+            "slug": "confirmed",
+            "title": "Confirmed"
+          },
+          {
+            "slug": "in_progress",
+            "title": "In Progress"
+          },
+          {
+            "slug": "fixed",
+            "title": "Fixed"
+          },
+          {
+            "slug": "closed",
+            "title": "Closed"
+          },
+          {
+            "slug": "reopened",
+            "title": "Reopened"
+          }
+        ],
+        "input_type": "select",
+        "var_type": "string",
+        "input_multiple": false,
+        "list_field": true,
+        "list_searchable": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "reproduction_steps",
+        "input_placeholder": "Steps to reproduce the bug",
+        "input_type": "editorjs",
+        "var_type": "array"
+      },
+      {
+        "input_slug": "assigned_to",
+        "linked_type": "developer",
+        "input_placeholder": "Developer assigned to fix",
+        "input_type": "select",
+        "var_type": "string",
+        "input_multiple": false,
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "project",
+        "linked_type": "project",
+        "input_placeholder": "Related project",
+        "input_type": "select",
+        "var_type": "string",
+        "input_multiple": false,
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "categories",
+        "linked_type": "category",
+        "input_placeholder": "Bug categories",
+        "input_type": "select",
+        "var_type": "array",
+        "input_multiple": true,
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "reported_date",
+        "input_placeholder": "Date reported",
+        "input_type": "date",
+        "var_type": "string",
+        "list_field": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "due_date",
+        "input_placeholder": "Target resolution date",
+        "input_type": "date",
+        "var_type": "string",
+        "list_field": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "screenshot_urls",
+        "input_placeholder": "URLs to bug screenshots",
+        "input_type": "url",
+        "var_type": "array",
+        "input_multiple": true
+      },
+      {
+        "input_slug": "files",
+        "input_type": "file_uploader",
+        "var_type": "array",
+        "input_placeholder": "Upload screenshots or related files"
+      },
+      {
+        "input_slug": "content_privacy",
+        "input_placeholder": "Content privacy",
+        "input_type": "select",
+        "input_options": [
+          {
+            "slug": "public",
+            "title": "Public link"
+          },
+          {
+            "slug": "private",
+            "title": "Private link"
+          },
+          {
+            "slug": "pending",
+            "title": "Submit for moderation"
+          },
+          {
+            "slug": "draft",
+            "title": "Draft"
+          }
+        ],
+        "list_field": false,
+        "input_unique": false
+      }
+    ],
+    "primary_module": "title",
+    "total_objects": 0
+  },
+  "developer": {
+    "type": "content",
+    "slug": "developer",
+    "name": "developer",
+    "plural": "developers",
+    "description": "Developers who work on resolving bugs.",
+    "readonly": false,
+    "sendable": false,
+    "editable": true,
+    "modules": [
+      {
+        "input_slug": "title",
+        "input_primary": true,
+        "input_type": "text",
+        "var_type": "string",
+        "input_placeholder": "Developer name",
+        "input_unique": false,
+        "list_field": true,
+        "list_searchable": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "email",
+        "input_placeholder": "Developer email",
+        "input_type": "email",
+        "var_type": "string",
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "team",
+        "input_placeholder": "Development team",
+        "input_type": "text",
+        "var_type": "string",
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "specialization",
+        "input_placeholder": "Technical specialization",
+        "input_type": "text",
+        "var_type": "array",
+        "input_multiple": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "profile_photo_url",
+        "input_placeholder": "Profile photo URL",
+        "input_type": "url",
+        "var_type": "string"
+      },
+      {
+        "input_slug": "files",
+        "input_type": "file_uploader",
+        "var_type": "array",
+        "input_placeholder": "Upload profile photo or documents"
+      },
+      {
+        "input_slug": "content_privacy",
+        "input_placeholder": "Content privacy",
+        "input_type": "select",
+        "input_options": [
+          {
+            "slug": "public",
+            "title": "Public link"
+          },
+          {
+            "slug": "private",
+            "title": "Private link"
+          },
+          {
+            "slug": "pending",
+            "title": "Submit for moderation"
+          },
+          {
+            "slug": "draft",
+            "title": "Draft"
+          }
+        ],
+        "list_field": false,
+        "input_unique": false
+      }
+    ],
+    "primary_module": "title",
+    "total_objects": 0
+  },
+  "project": {
+    "type": "content",
+    "slug": "project",
+    "name": "project",
+    "plural": "projects",
+    "description": "Software projects being tracked in the bug system.",
+    "readonly": false,
+    "sendable": false,
+    "editable": true,
+    "modules": [
+      {
+        "input_slug": "title",
+        "input_primary": true,
+        "input_type": "text",
+        "var_type": "string",
+        "input_placeholder": "Project name",
+        "input_unique": true,
+        "list_field": true,
+        "list_searchable": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "description",
+        "input_placeholder": "Project description",
+        "input_type": "textarea",
+        "var_type": "string",
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "version",
+        "input_placeholder": "Current version",
+        "input_type": "text",
+        "var_type": "string",
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "repository_url",
+        "input_placeholder": "Code repository URL",
+        "input_type": "url",
+        "var_type": "string"
+      },
+      {
+        "input_slug": "files",
+        "input_type": "file_uploader",
+        "var_type": "array",
+        "input_placeholder": "Upload project documentation"
+      },
+      {
+        "input_slug": "content_privacy",
+        "input_placeholder": "Content privacy",
+        "input_type": "select",
+        "input_options": [
+          {
+            "slug": "public",
+            "title": "Public link"
+          },
+          {
+            "slug": "private",
+            "title": "Private link"
+          },
+          {
+            "slug": "pending",
+            "title": "Submit for moderation"
+          },
+          {
+            "slug": "draft",
+            "title": "Draft"
+          }
+        ],
+        "list_field": false,
+        "input_unique": false
+      }
+    ],
+    "primary_module": "title",
+    "total_objects": 0
+  },
+  "category": {
+    "type": "content",
+    "slug": "category",
+    "name": "category",
+    "plural": "categories",
+    "description": "Categories for classifying bugs.",
+    "readonly": false,
+    "sendable": false,
+    "editable": true,
+    "modules": [
+      {
+        "input_slug": "title",
+        "input_primary": true,
+        "input_type": "text",
+        "var_type": "string",
+        "input_placeholder": "Category name",
+        "input_unique": true,
+        "list_field": true,
+        "list_searchable": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "description",
+        "input_placeholder": "Category description",
+        "input_type": "textarea",
+        "var_type": "string",
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "color",
+        "input_placeholder": "Category color",
+        "input_type": "color",
+        "var_type": "string",
+        "list_field": true
+      },
+      {
+        "input_slug": "content_privacy",
+        "input_placeholder": "Content privacy",
+        "input_type": "select",
+        "input_options": [
+          {
+            "slug": "public",
+            "title": "Public link"
+          },
+          {
+            "slug": "private",
+            "title": "Private link"
+          },
+          {
+            "slug": "pending",
+            "title": "Submit for moderation"
+          },
+          {
+            "slug": "draft",
+            "title": "Draft"
+          }
+        ],
+        "list_field": false,
+        "input_unique": false
+      }
+    ],
+    "primary_module": "title",
+    "total_objects": 0
+  }
+}
