@@ -1,0 +1,802 @@
+{
+  "story": {
+    "type": "content",
+    "slug": "story",
+    "name": "story",
+    "plural": "stories",
+    "description": "Central tracking for all news stories from conception to publication.",
+    "readonly": false,
+    "sendable": false,
+    "editable": true,
+    "modules": [
+      {
+        "input_slug": "headline",
+        "input_primary": true,
+        "input_type": "text",
+        "var_type": "string",
+        "input_placeholder": "Enter story headline",
+        "input_unique": false,
+        "list_field": true,
+        "list_searchable": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "summary",
+        "input_placeholder": "Brief story summary",
+        "input_type": "textarea",
+        "var_type": "string",
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "status",
+        "input_placeholder": "Current status",
+        "input_options": [
+          {
+            "slug": "pitch",
+            "title": "Pitched"
+          },
+          {
+            "slug": "assigned",
+            "title": "Assigned"
+          },
+          {
+            "slug": "in_progress",
+            "title": "In Progress"
+          },
+          {
+            "slug": "editing",
+            "title": "In Editing"
+          },
+          {
+            "slug": "ready",
+            "title": "Ready for Publication"
+          },
+          {
+            "slug": "published",
+            "title": "Published"
+          }
+        ],
+        "input_type": "select",
+        "var_type": "string",
+        "input_multiple": false,
+        "list_field": true,
+        "list_searchable": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "priority",
+        "input_placeholder": "Story priority",
+        "input_options": [
+          {
+            "slug": "breaking",
+            "title": "Breaking News"
+          },
+          {
+            "slug": "high",
+            "title": "High Priority"
+          },
+          {
+            "slug": "medium",
+            "title": "Medium Priority"
+          },
+          {
+            "slug": "low",
+            "title": "Low Priority"
+          }
+        ],
+        "input_type": "select",
+        "var_type": "string",
+        "input_multiple": false,
+        "list_field": true,
+        "list_searchable": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "categories",
+        "input_placeholder": "Story categories",
+        "input_options": [
+          {
+            "slug": "politics",
+            "title": "Politics"
+          },
+          {
+            "slug": "business",
+            "title": "Business"
+          },
+          {
+            "slug": "technology",
+            "title": "Technology"
+          },
+          {
+            "slug": "science",
+            "title": "Science"
+          },
+          {
+            "slug": "health",
+            "title": "Health"
+          },
+          {
+            "slug": "sports",
+            "title": "Sports"
+          },
+          {
+            "slug": "entertainment",
+            "title": "Entertainment"
+          },
+          {
+            "slug": "world",
+            "title": "World News"
+          },
+          {
+            "slug": "local",
+            "title": "Local News"
+          },
+          {
+            "slug": "opinion",
+            "title": "Opinion"
+          }
+        ],
+        "input_type": "select",
+        "var_type": "array",
+        "input_multiple": true,
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "deadline",
+        "input_placeholder": "Story deadline",
+        "input_type": "datetime-local",
+        "var_type": "string",
+        "list_field": true,
+        "list_searchable": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "sources",
+        "linked_type": "source",
+        "input_placeholder": "Related sources",
+        "input_type": "select",
+        "var_type": "array",
+        "input_multiple": true,
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "publications",
+        "linked_type": "publication",
+        "input_placeholder": "Publication platforms",
+        "input_type": "select",
+        "var_type": "array",
+        "input_multiple": true,
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "content",
+        "input_placeholder": "Story content and notes",
+        "input_type": "editorjs",
+        "var_type": "array"
+      },
+      {
+        "input_slug": "word_count",
+        "input_placeholder": "Target word count",
+        "input_type": "number",
+        "var_type": "int",
+        "list_field": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "image_urls",
+        "input_placeholder": "Story image URLs",
+        "input_type": "url",
+        "var_type": "array",
+        "input_multiple": true
+      },
+      {
+        "input_slug": "files",
+        "input_type": "file_uploader",
+        "var_type": "array",
+        "input_placeholder": "Supporting documents and media"
+      },
+      {
+        "input_slug": "content_privacy",
+        "input_placeholder": "Content privacy",
+        "input_type": "select",
+        "input_options": [
+          {
+            "slug": "public",
+            "title": "Public link"
+          },
+          {
+            "slug": "private",
+            "title": "Private link"
+          },
+          {
+            "slug": "pending",
+            "title": "Submit for moderation"
+          },
+          {
+            "slug": "draft",
+            "title": "Draft"
+          }
+        ],
+        "list_field": false,
+        "input_unique": false
+      }
+    ],
+    "primary_module": "headline",
+    "total_objects": 0
+  },
+  "source": {
+    "type": "content",
+    "slug": "source",
+    "name": "source",
+    "plural": "sources",
+    "description": "Database of news sources and contacts.",
+    "readonly": false,
+    "sendable": false,
+    "editable": true,
+    "modules": [
+      {
+        "input_slug": "name",
+        "input_primary": true,
+        "input_type": "text",
+        "var_type": "string",
+        "input_placeholder": "Source name",
+        "input_unique": false,
+        "list_field": true,
+        "list_searchable": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "organization",
+        "input_placeholder": "Organization/Affiliation",
+        "input_type": "text",
+        "var_type": "string",
+        "list_field": true,
+        "list_searchable": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "expertise",
+        "input_placeholder": "Areas of expertise",
+        "input_type": "text",
+        "var_type": "array",
+        "input_multiple": true,
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "contact_email",
+        "input_placeholder": "Email address",
+        "input_type": "email",
+        "var_type": "string",
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "contact_phone",
+        "input_placeholder": "Phone number",
+        "input_type": "tel",
+        "var_type": "string",
+        "list_field": true
+      },
+      {
+        "input_slug": "reliability_rating",
+        "input_placeholder": "Reliability rating (1-5)",
+        "input_type": "number",
+        "var_type": "int",
+        "list_field": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "notes",
+        "input_placeholder": "Notes about this source",
+        "input_type": "textarea",
+        "var_type": "string",
+        "list_searchable": true
+      },
+      {
+        "input_slug": "last_contact",
+        "input_placeholder": "Date of last contact",
+        "input_type": "date",
+        "var_type": "string",
+        "list_field": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "primary_reporter",
+        "linked_type": "reporter",
+        "input_placeholder": "Primary reporter contact",
+        "input_type": "select",
+        "var_type": "string",
+        "input_multiple": false,
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "website",
+        "input_placeholder": "Website URL",
+        "input_type": "url",
+        "var_type": "string"
+      },
+      {
+        "input_slug": "files",
+        "input_type": "file_uploader",
+        "var_type": "array",
+        "input_placeholder": "Source materials and documents"
+      },
+      {
+        "input_slug": "content_privacy",
+        "input_placeholder": "Content privacy",
+        "input_type": "select",
+        "input_options": [
+          {
+            "slug": "public",
+            "title": "Public link"
+          },
+          {
+            "slug": "private",
+            "title": "Private link"
+          },
+          {
+            "slug": "pending",
+            "title": "Submit for moderation"
+          },
+          {
+            "slug": "draft",
+            "title": "Draft"
+          }
+        ],
+        "list_field": false,
+        "input_unique": false
+      }
+    ],
+    "primary_module": "name",
+    "total_objects": 0
+  },
+  "publication": {
+    "type": "content",
+    "slug": "publication",
+    "name": "publication",
+    "plural": "publications",
+    "description": "Publication platforms and their requirements.",
+    "readonly": false,
+    "sendable": false,
+    "editable": true,
+    "modules": [
+      {
+        "input_slug": "title",
+        "input_primary": true,
+        "input_type": "text",
+        "var_type": "string",
+        "input_placeholder": "Publication name",
+        "input_unique": true,
+        "list_field": true,
+        "list_searchable": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "platform_type",
+        "input_placeholder": "Platform type",
+        "input_options": [
+          {
+            "slug": "print",
+            "title": "Print"
+          },
+          {
+            "slug": "website",
+            "title": "Website"
+          },
+          {
+            "slug": "social",
+            "title": "Social Media"
+          },
+          {
+            "slug": "newsletter",
+            "title": "Newsletter"
+          },
+          {
+            "slug": "app",
+            "title": "Mobile App"
+          },
+          {
+            "slug": "podcast",
+            "title": "Podcast"
+          },
+          {
+            "slug": "video",
+            "title": "Video Platform"
+          }
+        ],
+        "input_type": "select",
+        "var_type": "string",
+        "input_multiple": false,
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "publication_schedule",
+        "input_placeholder": "Publication schedule/frequency",
+        "input_type": "text",
+        "var_type": "string",
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "audience",
+        "input_placeholder": "Target audience",
+        "input_type": "text",
+        "var_type": "string",
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "format_requirements",
+        "input_placeholder": "Format requirements",
+        "input_type": "textarea",
+        "var_type": "string",
+        "list_searchable": true
+      },
+      {
+        "input_slug": "character_limit",
+        "input_placeholder": "Character limit (if applicable)",
+        "input_type": "number",
+        "var_type": "int",
+        "list_field": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "description",
+        "input_placeholder": "Publication description",
+        "input_type": "editorjs",
+        "var_type": "array"
+      },
+      {
+        "input_slug": "url",
+        "input_placeholder": "Publication URL",
+        "input_type": "url",
+        "var_type": "string",
+        "list_field": true
+      },
+      {
+        "input_slug": "content_privacy",
+        "input_placeholder": "Content privacy",
+        "input_type": "select",
+        "input_options": [
+          {
+            "slug": "public",
+            "title": "Public link"
+          },
+          {
+            "slug": "private",
+            "title": "Private link"
+          },
+          {
+            "slug": "pending",
+            "title": "Submit for moderation"
+          },
+          {
+            "slug": "draft",
+            "title": "Draft"
+          }
+        ],
+        "list_field": false,
+        "input_unique": false
+      }
+    ],
+    "primary_module": "title",
+    "total_objects": 0
+  },
+  "assignment": {
+    "type": "content",
+    "slug": "assignment",
+    "name": "assignment",
+    "plural": "assignments",
+    "description": "Reporter assignments to stories.",
+    "readonly": false,
+    "sendable": false,
+    "editable": true,
+    "modules": [
+      {
+        "input_slug": "title",
+        "input_primary": true,
+        "input_type": "text",
+        "var_type": "string",
+        "input_placeholder": "Assignment title",
+        "input_unique": false,
+        "list_field": true,
+        "list_searchable": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "story",
+        "linked_type": "story",
+        "input_placeholder": "Related story",
+        "input_type": "select",
+        "var_type": "string",
+        "input_multiple": false,
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "reporter",
+        "linked_type": "reporter",
+        "input_placeholder": "Assigned reporter",
+        "input_type": "select",
+        "var_type": "string",
+        "input_multiple": false,
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "role",
+        "input_placeholder": "Reporter role",
+        "input_options": [
+          {
+            "slug": "lead",
+            "title": "Lead Reporter"
+          },
+          {
+            "slug": "supporting",
+            "title": "Supporting Reporter"
+          },
+          {
+            "slug": "editor",
+            "title": "Editor"
+          },
+          {
+            "slug": "photographer",
+            "title": "Photographer"
+          },
+          {
+            "slug": "videographer",
+            "title": "Videographer"
+          },
+          {
+            "slug": "fact_checker",
+            "title": "Fact Checker"
+          }
+        ],
+        "input_type": "select",
+        "var_type": "string",
+        "input_multiple": false,
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "assignment_date",
+        "input_placeholder": "Date assigned",
+        "input_type": "date",
+        "var_type": "string",
+        "list_field": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "due_date",
+        "input_placeholder": "Assignment due date",
+        "input_type": "datetime-local",
+        "var_type": "string",
+        "list_field": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "status",
+        "input_placeholder": "Assignment status",
+        "input_options": [
+          {
+            "slug": "assigned",
+            "title": "Assigned"
+          },
+          {
+            "slug": "in_progress",
+            "title": "In Progress"
+          },
+          {
+            "slug": "submitted",
+            "title": "Submitted"
+          },
+          {
+            "slug": "revision",
+            "title": "Needs Revision"
+          },
+          {
+            "slug": "complete",
+            "title": "Complete"
+          }
+        ],
+        "input_type": "select",
+        "var_type": "string",
+        "input_multiple": false,
+        "list_field": true,
+        "list_searchable": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "instructions",
+        "input_placeholder": "Assignment instructions",
+        "input_type": "editorjs",
+        "var_type": "array"
+      },
+      {
+        "input_slug": "content_privacy",
+        "input_placeholder": "Content privacy",
+        "input_type": "select",
+        "input_options": [
+          {
+            "slug": "public",
+            "title": "Public link"
+          },
+          {
+            "slug": "private",
+            "title": "Private link"
+          },
+          {
+            "slug": "pending",
+            "title": "Submit for moderation"
+          },
+          {
+            "slug": "draft",
+            "title": "Draft"
+          }
+        ],
+        "list_field": false,
+        "input_unique": false
+      }
+    ],
+    "primary_module": "title",
+    "total_objects": 0
+  },
+  "reporter": {
+    "type": "content",
+    "slug": "reporter",
+    "name": "reporter",
+    "plural": "reporters",
+    "description": "Reporter profiles and expertise.",
+    "readonly": false,
+    "sendable": false,
+    "editable": true,
+    "modules": [
+      {
+        "input_slug": "name",
+        "input_primary": true,
+        "input_type": "text",
+        "var_type": "string",
+        "input_placeholder": "Reporter name",
+        "input_unique": false,
+        "list_field": true,
+        "list_searchable": true,
+        "list_sortable": true
+      },
+      {
+        "input_slug": "email",
+        "input_placeholder": "Email address",
+        "input_type": "email",
+        "var_type": "string",
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "phone",
+        "input_placeholder": "Phone number",
+        "input_type": "tel",
+        "var_type": "string",
+        "list_field": true
+      },
+      {
+        "input_slug": "role",
+        "input_placeholder": "Newsroom role",
+        "input_type": "text",
+        "var_type": "string",
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "beat",
+        "input_placeholder": "Primary beats",
+        "input_type": "text",
+        "var_type": "array",
+        "input_multiple": true,
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "skills",
+        "input_placeholder": "Special skills",
+        "input_type": "text",
+        "var_type": "array",
+        "input_multiple": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "languages",
+        "input_placeholder": "Languages spoken",
+        "input_type": "text",
+        "var_type": "array",
+        "input_multiple": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "availability",
+        "input_placeholder": "Availability status",
+        "input_options": [
+          {
+            "slug": "available",
+            "title": "Available"
+          },
+          {
+            "slug": "assigned",
+            "title": "Fully Assigned"
+          },
+          {
+            "slug": "leave",
+            "title": "On Leave"
+          },
+          {
+            "slug": "remote",
+            "title": "Working Remotely"
+          }
+        ],
+        "input_type": "select",
+        "var_type": "string",
+        "input_multiple": false,
+        "list_field": true,
+        "list_searchable": true
+      },
+      {
+        "input_slug": "bio",
+        "input_placeholder": "Reporter biography",
+        "input_type": "textarea",
+        "var_type": "string",
+        "list_searchable": true
+      },
+      {
+        "input_slug": "profile_photo",
+        "input_placeholder": "Profile photo URL",
+        "input_type": "url",
+        "var_type": "string"
+      },
+      {
+        "input_slug": "social_media",
+        "input_placeholder": "Social media profiles",
+        "input_type": "url",
+        "var_type": "array",
+        "input_multiple": true
+      },
+      {
+        "input_slug": "files",
+        "input_type": "file_uploader",
+        "var_type": "array",
+        "input_placeholder": "Credentials and documents"
+      },
+      {
+        "input_slug": "content_privacy",
+        "input_placeholder": "Content privacy",
+        "input_type": "select",
+        "input_options": [
+          {
+            "slug": "public",
+            "title": "Public link"
+          },
+          {
+            "slug": "private",
+            "title": "Private link"
+          },
+          {
+            "slug": "pending",
+            "title": "Submit for moderation"
+          },
+          {
+            "slug": "draft",
+            "title": "Draft"
+          }
+        ],
+        "list_field": false,
+        "input_unique": false
+      }
+    ],
+    "primary_module": "name",
+    "total_objects": 0
+  }
+}
