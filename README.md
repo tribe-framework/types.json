@@ -238,9 +238,9 @@ For public-facing content, include these standard modules:
 
 ## Example Use Case
 
-```
 Study this example blueprint for a news media organization to understand the expected JSON structure:
 
+```
 {
   "category": {
     "type": "content",
