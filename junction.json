@@ -68,6 +68,15 @@
         "list_sortable": true
       },
       {
+        "input_slug": "active",
+        "input_type": "checkbox",
+        "var_type": "bool",
+        "input_placeholder": "Active (use this blueprint)",
+        "list_field": true,
+        "list_search": false,
+        "list_sort": true
+      },
+      {
         "input_slug": "url",
         "input_type": "text",
         "var_type": "string",
